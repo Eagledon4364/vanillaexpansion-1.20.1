@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "vanillaexpansion",
+	"version": "${version}",
+	"name": "Vanilla Expansion",
+	"description": "Vanilla Expansion is a mod that enhances minecraft with some unique things",
+	"authors": [
+		"Eagledon4364"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/vanillaexpansion/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cdvj.vanillaexpansion.VanillaExpansion"
+		],
+		"client": [
+			"cdvj.vanillaexpansion.VanillaExpansionClient"
+		],
+		"fabric-datagen": [
+			"cdvj.vanillaexpansion.VanillaExpansionDataGenerator"
+		]
+	},
+	"mixins": [
+		"vanillaexpansion.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

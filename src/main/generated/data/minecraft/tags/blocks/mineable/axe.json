@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "vanillaexpansion:willow_planks",
+    "vanillaexpansion:willow_button",
+    "vanillaexpansion:stripped_willow_log",
+    "vanillaexpansion:stripped_willow_wood",
+    "vanillaexpansion:willow_log",
+    "vanillaexpansion:willow_wood",
+    "vanillaexpansion:willow_door",
+    "vanillaexpansion:willow_trapdoor",
+    "vanillaexpansion:willow_fence",
+    "vanillaexpansion:willow_fence_gate",
+    "vanillaexpansion:willow_pressure_plate",
+    "vanillaexpansion:redwood_planks",
+    "vanillaexpansion:redwood_button",
+    "vanillaexpansion:stripped_redwood_log",
+    "vanillaexpansion:stripped_redwood_wood",
+    "vanillaexpansion:redwood_log",
+    "vanillaexpansion:redwood_wood",
+    "vanillaexpansion:redwood_door",
+    "vanillaexpansion:redwood_trapdoor",
+    "vanillaexpansion:redwood_fence",
+    "vanillaexpansion:redwood_fence_gate",
+    "vanillaexpansion:redwood_pressure_plate"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "vanillaexpansion:redwood_log",
+    "vanillaexpansion:stripped_redwood_log",
+    "vanillaexpansion:redwood_wood",
+    "vanillaexpansion:stripped_redwood_wood"
+  ]
+}

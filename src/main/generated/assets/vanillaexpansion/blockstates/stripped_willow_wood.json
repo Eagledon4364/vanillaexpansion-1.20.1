@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "vanillaexpansion:block/stripped_willow_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "vanillaexpansion:block/stripped_willow_wood"
+    },
+    "axis=z": {
+      "model": "vanillaexpansion:block/stripped_willow_wood",
+      "x": 90
+    }
+  }
+}

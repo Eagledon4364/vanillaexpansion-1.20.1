@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "vanillaexpansion:block/redwood_planks",
+    "side": "vanillaexpansion:block/redwood_planks",
+    "top": "vanillaexpansion:block/redwood_planks"
+  }
+}

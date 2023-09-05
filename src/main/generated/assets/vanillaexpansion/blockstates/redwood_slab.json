@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanillaexpansion:block/redwood_slab"
+    },
+    "type=double": {
+      "model": "vanillaexpansion:block/redwood_planks"
+    },
+    "type=top": {
+      "model": "vanillaexpansion:block/redwood_slab_top"
+    }
+  }
+}

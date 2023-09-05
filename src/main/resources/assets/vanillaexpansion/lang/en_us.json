@@ -1,0 +1,38 @@
+{
+  "item.vanillaexpansion.ruby": "Ruby",
+
+  "block.vanillaexpansion.willow_planks": "Willow Planks",
+  "block.vanillaexpansion.willow_log": "Willow Log",
+  "block.vanillaexpansion.willow_wood": "Willow Wood",
+  "block.vanillaexpansion.stripped_willow_log": "Stripped Willow Log",
+  "block.vanillaexpansion.stripped_willow_wood": "Stripped Willow Wood",
+  "block.vanillaexpansion.willow_slab": "Willow Slab",
+  "block.vanillaexpansion.willow_stairs": "Willow Stairs",
+  "block.vanillaexpansion.willow_pressure_plate": "Willow Pressure Plate",
+  "block.vanillaexpansion.willow_button": "Willow Button",
+  "block.vanillaexpansion.willow_door": "Willow Door",
+  "block.vanillaexpansion.willow_trapdoor": "Willow Trapdoor",
+  "block.vanillaexpansion.willow_fence": "Willow Fence",
+  "block.vanillaexpansion.willow_fence_gate": "Willow Fence Gate",
+  "block.vanillaexpansion.willow_leaves": "Willow Leaves",
+  "block.vanillaexpansion.willow_sapling": "Willow Sapling",
+
+  "block.vanillaexpansion.redwood_planks": "Redwood Planks",
+  "block.vanillaexpansion.redwood_log": "Redwood Log",
+  "block.vanillaexpansion.redwood_wood": "Redwood Wood",
+  "block.vanillaexpansion.stripped_redwood_log": "Stripped Redwood Log",
+  "block.vanillaexpansion.stripped_redwood_wood": "Stripped Redwood Wood",
+  "block.vanillaexpansion.redwood_slab": "Redwood Slab",
+  "block.vanillaexpansion.redwood_stairs": "Redwood Stairs",
+  "block.vanillaexpansion.redwood_pressure_plate": "Redwood Pressure Plate",
+  "block.vanillaexpansion.redwood_button": "Redwood Button",
+  "block.vanillaexpansion.redwood_door": "Redwood Door",
+  "block.vanillaexpansion.redwood_trapdoor": "Redwood Trapdoor",
+  "block.vanillaexpansion.redwood_fence": "Redwood Fence",
+  "block.vanillaexpansion.redwood_fence_gate": "Redwood Fence Gate",
+  "block.vanillaexpansion.redwood_leaves": "Redwood Leaves",
+  "block.vanillaexpansion.redwood_sapling": "Redwood Sapling",
+
+
+  "itemgroup.ruby": "Vanilla Expansion Group"
+}

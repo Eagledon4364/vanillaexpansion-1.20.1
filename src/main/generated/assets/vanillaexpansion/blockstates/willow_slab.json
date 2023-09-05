@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "vanillaexpansion:block/willow_slab"
+    },
+    "type=double": {
+      "model": "vanillaexpansion:block/willow_planks"
+    },
+    "type=top": {
+      "model": "vanillaexpansion:block/willow_slab_top"
+    }
+  }
+}
