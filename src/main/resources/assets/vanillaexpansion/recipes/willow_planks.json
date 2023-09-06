@@ -4,7 +4,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "minecraft:willow_logs"
+      "tag": "vanillaexpansion:willow_logs"
     }
   ],
   "result": {

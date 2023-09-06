@@ -4,7 +4,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "minecraft:redwood_logs"
+      "tag": "vanillaexpansion:redwood_logs"
     }
   ],
   "result": {
