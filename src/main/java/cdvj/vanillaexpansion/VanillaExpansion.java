@@ -1,6 +1,7 @@
 package cdvj.vanillaexpansion;
 
 import cdvj.vanillaexpansion.block.ModBlocks;
+import cdvj.vanillaexpansion.datagen.ModRecipeProvider;
 import cdvj.vanillaexpansion.item.ModItemGroups;
 import cdvj.vanillaexpansion.item.ModItems;
 import cdvj.vanillaexpansion.util.ModFlammableBlocks;
@@ -26,6 +27,7 @@ public class VanillaExpansion implements ModInitializer {
 		ModStrippableBlocks.registerStrippables();
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModRecipeProvider.registerModRecipe();
 
 
 

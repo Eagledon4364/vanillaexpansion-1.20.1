@@ -1,10 +1,9 @@
 package cdvj.vanillaexpansion.datagen;
 
-import cdvj.vanillaexpansion.block.CustomBlockTags;
+import cdvj.vanillaexpansion.util.CustomBlockTags;
 import cdvj.vanillaexpansion.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -163,6 +162,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.STRIPPED_WILLOW_LOG)
                 .add(ModBlocks.WILLOW_WOOD)
                 .add(ModBlocks.STRIPPED_WILLOW_WOOD)
+        ;
+        getOrCreateTagBuilder(BlockTags.PLANKS)
+                .add(ModBlocks.WILLOW_PLANKS)
+                .add(ModBlocks.REDWOOD_PLANKS)
         ;
 
 

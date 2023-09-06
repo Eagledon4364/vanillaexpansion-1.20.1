@@ -1,6 +1,7 @@
-// 1.20.1	2023-09-06T00:20:25.846408	Vanilla Expansion/Tags for minecraft:block
+// 1.20.1	2023-09-06T18:42:15.980666	Vanilla Expansion/Tags for minecraft:block
 f2a8a23c8aa46bc3e0962b7f075b5f76ab757f7c data\minecraft\tags\blocks\stairs.json
 b5896f5d93acde0782483f1f27fd5935db61e56e data\minecraft\tags\blocks\leaves.json
+fb2809529edff6e14d28ae5c43067b6bc11f4953 data\minecraft\tags\blocks\planks.json
 1c439576d19a75ec3437899f0c649e23ede6172a data\minecraft\tags\blocks\mineable\axe.json
 b5896f5d93acde0782483f1f27fd5935db61e56e data\minecraft\tags\blocks\mineable\hoe.json
 4e188ff7bdebefbd43c3c6ccd4457f7a50a2373c data\minecraft\tags\blocks\logs.json
@@ -19,8 +20,8 @@ b7352ee8f8493e60100ffe19f4f40f84bdb38b73 data\minecraft\tags\blocks\trapdoors.js
 6e053dc1dd3056f3652c6da4a4a16019f3b654a8 data\minecraft\tags\blocks\saplings.json
 981893cbefe9e5d02e6dade337233c3f2198816a data\minecraft\tags\blocks\wooden_buttons.json
 3e367a7d023a3d5039170c45b40eb7b86fd9ad79 data\minecraft\tags\blocks\wooden_doors.json
-3e6457345c3a75681e10f76373725eb2580ed736 data\minecraft\tags\blocks\wooden_fences.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
+3e6457345c3a75681e10f76373725eb2580ed736 data\minecraft\tags\blocks\wooden_fences.json
 f2a8a23c8aa46bc3e0962b7f075b5f76ab757f7c data\minecraft\tags\blocks\wooden_stairs.json
 4e188ff7bdebefbd43c3c6ccd4457f7a50a2373c data\minecraft\tags\blocks\logs_that_burn.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\mineable\pickaxe.json

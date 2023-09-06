@@ -1,4 +1,4 @@
-package cdvj.vanillaexpansion.block;
+package cdvj.vanillaexpansion.util;
 
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryKeys;

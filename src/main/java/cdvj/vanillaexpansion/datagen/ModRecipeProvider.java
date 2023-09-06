@@ -1,5 +1,6 @@
 package cdvj.vanillaexpansion.datagen;
 
+import cdvj.vanillaexpansion.VanillaExpansion;
 import cdvj.vanillaexpansion.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -18,6 +19,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
     public void generate(Consumer<RecipeJsonProvider> exporter) {
 
 
+
+    }
+    public static void registerModRecipe() {
+        VanillaExpansion.LOGGER.info("registering recipes " + VanillaExpansion.MOD_ID);
 
     }
 }
