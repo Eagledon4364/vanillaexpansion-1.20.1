@@ -4,6 +4,7 @@ import cdvj.vanillaexpansion.util.CustomBlockTags;
 import cdvj.vanillaexpansion.block.ModBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
 
@@ -166,6 +167,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         getOrCreateTagBuilder(BlockTags.PLANKS)
                 .add(ModBlocks.WILLOW_PLANKS)
                 .add(ModBlocks.REDWOOD_PLANKS)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.PAXEL_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
         ;
 
 

@@ -37,10 +37,10 @@ public class ModConfiguredFeatures {
 
         register(context, REDWOOD_KEY, Feature.TREE, (new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.REDWOOD_LOG),
-                new GiantTrunkPlacer(10, 11, 7),
+                new GiantTrunkPlacer(14, 18, 11),
                 BlockStateProvider.of(ModBlocks.REDWOOD_LEAVES),
-                new MegaPineFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), ConstantIntProvider.create(6)),
-                new TwoLayersFeatureSize(3, 1, 5))).build());
+                new MegaPineFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), ConstantIntProvider.create(13)),
+                new TwoLayersFeatureSize(1, 1, 2))).build());
     }
 
 

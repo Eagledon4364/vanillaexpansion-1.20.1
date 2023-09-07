@@ -11,11 +11,21 @@ import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
+    public static final ItemGroup TOOL_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(VanillaExpansion.MOD_ID, "ancient_netherite_paxel"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.tool"))
+                    .icon(() -> new ItemStack(ModItems.ANCIENT_NETHERITE_PAXEL)).
+                    entries((displayContext, entries) -> {
+                        entries.add(ModItems.ANCIENT_NETHERITE_PAXEL);
+
+                    }).build());
     public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(VanillaExpansion.MOD_ID, "ruby"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ruby"))
                     .icon(() -> new ItemStack(ModItems.RUBY)).entries((displayContext, entries) -> {
+                        //ores and drops
                         entries.add(ModItems.RUBY);
+                        entries.add(ModItems.ANCIENT_NETHERITE_INGOT);
                         //willow
                         entries.add(ModBlocks.WILLOW_PLANKS);
                         entries.add(ModBlocks.WILLOW_LOG);
@@ -57,6 +67,6 @@ public class ModItemGroups {
 
 
     public static void registerItemGroups() {
-        VanillaExpansion.LOGGER.info("registering itemgroups for " + VanillaExpansion.MOD_ID);
+        VanillaExpansion.LOGGER.info("registering item groups for " + VanillaExpansion.MOD_ID);
     }
 }

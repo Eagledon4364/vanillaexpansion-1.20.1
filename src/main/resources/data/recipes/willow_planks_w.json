@@ -4,7 +4,7 @@
   "group": "planks",
   "ingredients": [
     {
-      "tag": "vanillaexpansion:willow_logs"
+      "item": "vanillaexpansion:willow_wood"
     }
   ],
   "result": {

@@ -48,20 +48,12 @@ public class ModModelProvider extends FabricModelProvider {
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.REDWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
 
-
-
-
-
-
-
-
-
-
-
     }
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_NETHERITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.ANCIENT_NETHERITE_PAXEL, Models.GENERATED);
     }
 }

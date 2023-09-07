@@ -1,5 +1,9 @@
 {
   "item.vanillaexpansion.ruby": "Ruby",
+  "item.vanillaexpansion.ancient_netherite_ingot": "Ancient Netherite Ingot",
+
+
+  "item.vanillaexpansion.ancient_netherite_paxel": "Ancient Netherite Paxel",
 
   "block.vanillaexpansion.willow_planks": "Willow Planks",
   "block.vanillaexpansion.willow_log": "Willow Log",
@@ -34,5 +38,6 @@
   "block.vanillaexpansion.redwood_sapling": "Redwood Sapling",
 
 
-  "itemgroup.ruby": "Vanilla Expansion Group"
+  "itemgroup.ruby": "Vanilla Expansion Group",
+  "itemgroup.tool": "Vanilla Expansion Tools"
 }

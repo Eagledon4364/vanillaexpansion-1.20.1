@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "planks",
+  "ingredients": [
+    {
+      "item": "vanillaexpansion:stripped_redwood_wood"
+    }
+  ],
+  "result": {
+    "item": "vanillaexpansion:redwood_planks"
+  }
+}

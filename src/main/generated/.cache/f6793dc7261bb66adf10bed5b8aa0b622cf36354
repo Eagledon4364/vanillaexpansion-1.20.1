@@ -1,11 +1,11 @@
-// 1.20.1	2023-09-06T18:42:15.9836672	Vanilla Expansion/Block Loot Tables
+// 1.20.1	2023-09-07T13:50:05.4600638	Vanilla Expansion/Block Loot Tables
 1033958eb8758da277b0684a77abf7b9c5156f54 data\vanillaexpansion\loot_tables\blocks\stripped_willow_log.json
-65290a1c88fb2acac8fd6b7f33be0cf4ccf73fd7 data\vanillaexpansion\loot_tables\blocks\willow_sapling.json
 0b5a569f807d7c62df3372b9c699741b9ec14f3c data\vanillaexpansion\loot_tables\blocks\willow_trapdoor.json
+65290a1c88fb2acac8fd6b7f33be0cf4ccf73fd7 data\vanillaexpansion\loot_tables\blocks\willow_sapling.json
 fea24bccd35e1b8d5829090fcef777c273d7b3d2 data\vanillaexpansion\loot_tables\blocks\willow_planks.json
 4ce256203c91e211e10dec1e8edf01d0b138c90c data\vanillaexpansion\loot_tables\blocks\willow_button.json
-c6b8ac62242851a2ce544f3c3a424aa0ad18c952 data\vanillaexpansion\loot_tables\blocks\stripped_redwood_wood.json
 9397f65a66a21c7173c4b6cb73bd03a1222df15b data\vanillaexpansion\loot_tables\blocks\stripped_willow_wood.json
+c6b8ac62242851a2ce544f3c3a424aa0ad18c952 data\vanillaexpansion\loot_tables\blocks\stripped_redwood_wood.json
 38b24109e8cfdea2ba31532b7ab93af0fbd78601 data\vanillaexpansion\loot_tables\blocks\willow_door.json
 479572c61247cc8b32f5f147b81282df0cf912e5 data\vanillaexpansion\loot_tables\blocks\redwood_sapling.json
 ff875b6660d05536bf47e1c8626c2e61f66f4bfa data\vanillaexpansion\loot_tables\blocks\redwood_door.json
