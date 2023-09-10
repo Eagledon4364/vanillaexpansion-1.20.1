@@ -49,6 +49,7 @@ public class ModConfiguredFeatures {
 
 
 
+
     private static <FC extends FeatureConfig, F extends Feature<FC>> void
     register(Registerable<ConfiguredFeature<?, ?>> context,
          RegistryKey<ConfiguredFeature<?, ?>> key, F feature, FC configuration) {

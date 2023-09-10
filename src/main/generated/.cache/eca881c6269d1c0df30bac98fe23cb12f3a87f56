@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-07T13:50:05.411064	Vanilla Expansion/Tags for minecraft:block
+// 1.20.1	2023-09-11T00:14:30.2067667	Vanilla Expansion/Tags for minecraft:block
 f2a8a23c8aa46bc3e0962b7f075b5f76ab757f7c data\minecraft\tags\blocks\stairs.json
 b5896f5d93acde0782483f1f27fd5935db61e56e data\minecraft\tags\blocks\leaves.json
 fb2809529edff6e14d28ae5c43067b6bc11f4953 data\minecraft\tags\blocks\planks.json
@@ -7,22 +7,31 @@ b5896f5d93acde0782483f1f27fd5935db61e56e data\minecraft\tags\blocks\mineable\hoe
 4e188ff7bdebefbd43c3c6ccd4457f7a50a2373c data\minecraft\tags\blocks\logs.json
 3544818404ff1870d72391a62ffa080be67470ec data\minecraft\tags\blocks\willow_logs.json
 c431d8f468006c1ca2c8590e5875b78fe2bef579 data\minecraft\tags\blocks\redwood_logs.json
+58f65b868a21352a0c6104be28d92be539e4d948 data\minecraft\tags\blocks\terrabreaker_mineable.json
 3e6457345c3a75681e10f76373725eb2580ed736 data\minecraft\tags\blocks\fences.json
+4d7dd91eb71c9df4001798e9e9b2d0dcfbad96dc data\minecraft\tags\blocks\trowel_mineable.json
 3e367a7d023a3d5039170c45b40eb7b86fd9ad79 data\minecraft\tags\blocks\doors.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\mineable\shovel.json
+6f57bf1f2cc9a0fa1730309a6b3c8f6172fe79da data\minecraft\tags\blocks\axel_mineable.json
+6fbebc2be508493a40fb1d8fc0d68a51af1eace3 data\minecraft\tags\blocks\cutter_mattock_mineable.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_iron_tool.json
 1bffedf9455d7ca4bedfb86e2e2ee2cd7e6e2fc4 data\minecraft\tags\blocks\fence_gates.json
 6958c2b1371fe782d8482cd8959c7cb4820339ae data\minecraft\tags\blocks\paxel_mineable.json
 59e5e583360a26fadfe1fc4523a3c78a3f759718 data\minecraft\tags\blocks\wooden_slabs.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_stone_tool.json
 b7352ee8f8493e60100ffe19f4f40f84bdb38b73 data\minecraft\tags\blocks\trapdoors.json
+7191db9c057d24885782117aa79b720273400531 data\minecraft\tags\blocks\cutter_mineable.json
 3608515dd82ef81e6e30e6af91dc41221c20ef2f data\minecraft\tags\blocks\wooden_pressure_plates.json
+29d4f19b8c892b1605a35694b9dd5ef7447b39ae data\minecraft\tags\blocks\scythe_mineable.json
 0a509b7908c668a7f305ef8f7ab5395f6a09d1b1 data\minecraft\tags\blocks\wooden_trapdoors.json
+0abee4e8c156427f52d0e1475f21cccde2f9fcb2 data\minecraft\tags\blocks\adze_mineable.json
 6e053dc1dd3056f3652c6da4a4a16019f3b654a8 data\minecraft\tags\blocks\saplings.json
 981893cbefe9e5d02e6dade337233c3f2198816a data\minecraft\tags\blocks\wooden_buttons.json
 3e367a7d023a3d5039170c45b40eb7b86fd9ad79 data\minecraft\tags\blocks\wooden_doors.json
+7b0a61fb99d3e1efe99cff95d7325ec712595e21 data\minecraft\tags\blocks\ripper_mineable.json
 3e6457345c3a75681e10f76373725eb2580ed736 data\minecraft\tags\blocks\wooden_fences.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_diamond_tool.json
 f2a8a23c8aa46bc3e0962b7f075b5f76ab757f7c data\minecraft\tags\blocks\wooden_stairs.json
+9269e0932e0307c71ca6ef596d2cb3c6979e088e data\minecraft\tags\blocks\mattock_mineable.json
 4e188ff7bdebefbd43c3c6ccd4457f7a50a2373c data\minecraft\tags\blocks\logs_that_burn.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\mineable\pickaxe.json

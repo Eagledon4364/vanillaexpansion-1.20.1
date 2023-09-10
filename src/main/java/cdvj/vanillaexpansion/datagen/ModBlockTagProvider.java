@@ -168,11 +168,60 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WILLOW_PLANKS)
                 .add(ModBlocks.REDWOOD_PLANKS)
         ;
+
+
+        //2
+        getOrCreateTagBuilder(CustomBlockTags.AXEL_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.ADZE_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.MATTOCK_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.CUTTER_MATTOCK_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.SCYTHE_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.TROWEL_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+        ;
+
+        //3
         getOrCreateTagBuilder(CustomBlockTags.PAXEL_MINEABLE)
                 .addTag(BlockTags.AXE_MINEABLE)
                 .addTag(BlockTags.PICKAXE_MINEABLE)
                 .addTag(BlockTags.SHOVEL_MINEABLE)
         ;
+        getOrCreateTagBuilder(CustomBlockTags.CUTTER_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+        ;
+        getOrCreateTagBuilder(CustomBlockTags.RIPPER_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+        ;
+
+
+        //4
+        getOrCreateTagBuilder(CustomBlockTags.TERRABREAKER_MINEABLE)
+                .addTag(BlockTags.AXE_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+        ;
+
 
 
 

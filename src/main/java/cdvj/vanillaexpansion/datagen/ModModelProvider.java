@@ -16,6 +16,8 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PYRONITE_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
 
         //willow
         blockStateModelGenerator.registerLog(ModBlocks.WILLOW_LOG).log(ModBlocks.WILLOW_LOG).wood(ModBlocks.WILLOW_WOOD);
@@ -53,7 +55,26 @@ public class ModModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANCIENT_NETHERITE_INGOT, Models.GENERATED);
-        itemModelGenerator.register(ModItems.ANCIENT_NETHERITE_PAXEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_INGOT, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.BASE_TOOL, Models.GENERATED);
+        //1
+        itemModelGenerator.register(ModItems.PYRONITE_PICKAXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_SHOVEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_AXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_HOE, Models.GENERATED);
+        //2
+        itemModelGenerator.register(ModItems.PYRONITE_AXEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_ADZE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_MATTOCK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_CUTTER_MATTOCK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_SCYTHE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_TROWEL, Models.GENERATED);
+        //3
+        itemModelGenerator.register(ModItems.PYRONITE_PAXEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_RIPPER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_CUTTER, Models.GENERATED);
+        //4
+        itemModelGenerator.register(ModItems.PYRONITE_TERRA_BREAKER, Models.GENERATED);
     }
 }

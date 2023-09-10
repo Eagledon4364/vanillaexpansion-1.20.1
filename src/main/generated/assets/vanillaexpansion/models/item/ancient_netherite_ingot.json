@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "vanillaexpansion:item/ancient_netherite_ingot"
-  }
-}

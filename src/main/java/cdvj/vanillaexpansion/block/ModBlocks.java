@@ -13,6 +13,12 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class ModBlocks {
+    //ores
+    public static final Block RUBY_ORE = registerBlock("ruby_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE)));
+    public static final Block PYRONITE_ORE = registerBlock("pyronite_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+    //trees
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
     public static final Block WILLOW_LOG = registerBlock("willow_log",

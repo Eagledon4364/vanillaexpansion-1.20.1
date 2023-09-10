@@ -1,5 +1,6 @@
 package cdvj.vanillaexpansion.datagen;
 
+import cdvj.vanillaexpansion.item.ModItems;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import cdvj.vanillaexpansion.block.ModBlocks;
@@ -57,6 +58,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(ModBlocks.REDWOOD_SAPLING);
 
 
+        addDrop(ModBlocks.RUBY_ORE, copperLikeOreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
+        addDrop(ModBlocks.PYRONITE_ORE);
+
+
 
 
 
@@ -69,7 +74,7 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
                         ItemEntry.builder(item)
                                 .apply(SetCountLootFunction
                                         .builder(UniformLootNumberProvider
-                                                .create(2.0f, 5.0f))))
+                                                .create(1.0f, 2.0f))))
                         .apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
     }
 }

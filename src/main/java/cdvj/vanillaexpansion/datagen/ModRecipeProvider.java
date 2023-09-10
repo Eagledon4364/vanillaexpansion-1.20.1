@@ -21,8 +21,4 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 
     }
-    public static void registerModRecipe() {
-        VanillaExpansion.LOGGER.info("registering recipes " + VanillaExpansion.MOD_ID);
-
-    }
 }

@@ -27,7 +27,6 @@ public class VanillaExpansion implements ModInitializer {
 		ModStrippableBlocks.registerStrippables();
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
-		ModRecipeProvider.registerModRecipe();
 
 
 

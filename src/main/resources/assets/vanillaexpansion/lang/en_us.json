@@ -1,9 +1,30 @@
 {
   "item.vanillaexpansion.ruby": "Ruby",
-  "item.vanillaexpansion.ancient_netherite_ingot": "Ancient Netherite Ingot",
+  "item.vanillaexpansion.pyronite_ingot": "Pyronite Ingot",
+
+  "item.vanillaexpansion.base_tool": "Base Tool",
 
 
-  "item.vanillaexpansion.ancient_netherite_paxel": "Ancient Netherite Paxel",
+  "item.vanillaexpansion.pyronite_pickaxe": "Pyronite Pickaxe",
+  "item.vanillaexpansion.pyronite_axe": "Pyronite Axe",
+  "item.vanillaexpansion.pyronite_shovel": "Pyronite Shovel",
+  "item.vanillaexpansion.pyronite_hoe": "Pyronite Hoe",
+
+  "item.vanillaexpansion.pyronite_axel": "Pyronite Axel",
+  "item.vanillaexpansion.pyronite_adze": "Pyronite Adze",
+  "item.vanillaexpansion.pyronite_scythe": "Pyronite Scythe",
+  "item.vanillaexpansion.pyronite_trowel": "Pyronite Trowel",
+  "item.vanillaexpansion.pyronite_mattock": "Pyronite Mattock",
+  "item.vanillaexpansion.pyronite_cutter_mattock": "Pyronite Cutter Mattock",
+
+  "item.vanillaexpansion.pyronite_paxel": "Pyronite Paxel",
+  "item.vanillaexpansion.pyronite_cutter": "Pyronite Cutter",
+  "item.vanillaexpansion.pyronite_ripper": "Pyronite Ripper",
+
+  "item.vanillaexpansion.pyronite_terra_breaker": "Pyronite Terra Breaker",
+
+  "block.vanillaexpansion.ruby_ore": "Ruby Ore",
+  "block.vanillaexpansion.pyronite_ore": "Pyronite Ore",
 
   "block.vanillaexpansion.willow_planks": "Willow Planks",
   "block.vanillaexpansion.willow_log": "Willow Log",

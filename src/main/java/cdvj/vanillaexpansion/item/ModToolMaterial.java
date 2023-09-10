@@ -6,8 +6,8 @@ import net.minecraft.recipe.Ingredient;
 import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
-    ANCIENT_NETHERITE(4, 4096, 12f, 5, 40,
-            () -> Ingredient.ofItems(ModItems.ANCIENT_NETHERITE_INGOT));
+    PYRONITE(4, 4096, 12f, 5, 40,
+            () -> Ingredient.ofItems(ModItems.PYRONITE_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

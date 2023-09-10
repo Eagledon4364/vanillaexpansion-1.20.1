@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "food",
+  "cookingtime": 200,
+  "experience": 1,
+  "ingredient": {
+    "item": "vanillaexpansion:pyronite_ore"
+  },
+  "result": "vanillaexpansion:pyronite_ingot"
+}
