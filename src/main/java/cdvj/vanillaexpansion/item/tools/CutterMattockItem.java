@@ -1,4 +1,4 @@
-package cdvj.vanillaexpansion.item.tools.TwoTools;
+package cdvj.vanillaexpansion.item.tools;
 
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import com.google.common.collect.ImmutableMap;
@@ -43,15 +43,15 @@ public class CutterMattockItem extends MiningToolItem {
         Optional<Object> optional4 = Optional.empty();
         if (optional.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            optional4 = Optional.of(optional);
+
         } else if (optional2.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.BLOCK_SCRAPED, blockPos, 0);
-            optional4 = Optional.of(optional2);
+
         } else if (optional3.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.WAX_REMOVED, blockPos, 0);
-            optional4 = Optional.of(optional3);
+
         }
         if (optional4.isPresent()) {
             if (playerEntity instanceof ServerPlayerEntity) {

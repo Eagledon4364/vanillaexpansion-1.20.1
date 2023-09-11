@@ -77,15 +77,15 @@ public class TerraBreakerItem extends MiningToolItem {
         Optional<Object> optional4 = Optional.empty();
         if (optional.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            optional4 = optional;
+
         } else if (optional2.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.BLOCK_SCRAPED, blockPos, 0);
-            optional4 = optional2;
+
         } else if (optional3.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.WAX_REMOVED, blockPos, 0);
-            optional4 = optional3;
+
         }
         if (optional4.isPresent()) {
             if (playerEntity instanceof ServerPlayerEntity) {
@@ -107,13 +107,15 @@ public class TerraBreakerItem extends MiningToolItem {
     public static Consumer<ItemUsageContext> createTillAction(BlockState result) {
         return context -> {
             context.getWorld().setBlockState(context.getBlockPos(), result, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(), GameEvent.Emitter.of(context.getPlayer(), result));
+            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(), GameEvent.Emitter.of(context.getPlayer(),
+                    result));
         };
     }
     public static Consumer<ItemUsageContext> createTillAndDropAction(BlockState result, ItemConvertible droppedItem) {
         return context -> {
             context.getWorld().setBlockState(context.getBlockPos(), result, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(), GameEvent.Emitter.of(context.getPlayer(), result));
+            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(), GameEvent.Emitter.of(context.getPlayer(),
+                    result));
             Block.dropStack(context.getWorld(), context.getBlockPos(), context.getSide(), new ItemStack(droppedItem));
         };
     }

@@ -1,4 +1,6 @@
-package cdvj.vanillaexpansion.item.tools.TwoTools;
+package cdvj.vanillaexpansion.item.tools;
+
+
 
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import com.google.common.collect.ImmutableMap;

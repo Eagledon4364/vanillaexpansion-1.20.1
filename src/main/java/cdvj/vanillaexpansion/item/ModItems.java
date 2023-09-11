@@ -1,11 +1,14 @@
 package cdvj.vanillaexpansion.item;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
+import cdvj.vanillaexpansion.item.tools.AdzeItem;
+import cdvj.vanillaexpansion.item.tools.AxelItem;
+import cdvj.vanillaexpansion.item.tools.ScytheItem;
 import cdvj.vanillaexpansion.item.tools.TerraBreakerItem;
-import cdvj.vanillaexpansion.item.tools.ThreeCombo.CutterItem;
-import cdvj.vanillaexpansion.item.tools.ThreeCombo.RipperItem;
-import cdvj.vanillaexpansion.item.tools.TwoTools.*;
-import cdvj.vanillaexpansion.item.tools.ThreeCombo.PaxelItem;
+import cdvj.vanillaexpansion.item.tools.CutterItem;
+import cdvj.vanillaexpansion.item.tools.RipperItem;
+import cdvj.vanillaexpansion.item.tools.*;
+import cdvj.vanillaexpansion.item.tools.PaxelItem;
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;

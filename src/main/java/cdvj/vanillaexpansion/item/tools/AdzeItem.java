@@ -1,5 +1,6 @@
-package cdvj.vanillaexpansion.item.tools.TwoTools;
+package cdvj.vanillaexpansion.item.tools;
 
+import cdvj.vanillaexpansion.util.CustomBlockTags;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
@@ -30,7 +31,7 @@ public class AdzeItem extends MiningToolItem {
     protected static final Map<Block, Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>>> TILLING_ACTIONS = Maps.newHashMap(ImmutableMap.of(Blocks.GRASS_BLOCK, Pair.of(HoeItem::canTillFarmland, HoeItem.createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.DIRT_PATH, Pair.of(HoeItem::canTillFarmland, HoeItem.createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.DIRT, Pair.of(HoeItem::canTillFarmland, HoeItem.createTillAction(Blocks.FARMLAND.getDefaultState())), Blocks.COARSE_DIRT, Pair.of(HoeItem::canTillFarmland, HoeItem.createTillAction(Blocks.DIRT.getDefaultState())), Blocks.ROOTED_DIRT, Pair.of(itemUsageContext -> true, HoeItem.createTillAndDropAction(Blocks.DIRT.getDefaultState(), Items.HANGING_ROOTS))));
 
     public AdzeItem(float attackDamage, float attackSpeed, ToolMaterial material, TagKey<Block> effectiveBlocks, Settings settings) {
-        super(attackDamage, attackSpeed, material, effectiveBlocks, settings);
+        super(attackDamage, attackSpeed, material, CustomBlockTags.ADZE_MINEABLE, settings);
     }
 
     @Override
@@ -46,15 +47,15 @@ public class AdzeItem extends MiningToolItem {
         Optional<Object> optional4 = Optional.empty();
         if (optional.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            optional4 = Optional.of(optional);
+
         } else if (optional2.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.BLOCK_SCRAPED, blockPos, 0);
-            optional4 = Optional.of(optional2);
+
         } else if (optional3.isPresent()) {
             world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0f, 1.0f);
             world.syncWorldEvent(playerEntity, WorldEvents.WAX_REMOVED, blockPos, 0);
-            optional4 = Optional.of(optional3);
+
         }
         if (optional4.isPresent()) {
             if (playerEntity instanceof ServerPlayerEntity) {
@@ -94,9 +95,12 @@ public class AdzeItem extends MiningToolItem {
     }
     public static Consumer<ItemUsageContext> createTillAndDropAction(BlockState result, ItemConvertible droppedItem) {
         return context -> {
-            context.getWorld().setBlockState(context.getBlockPos(), result, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(), GameEvent.Emitter.of(context.getPlayer(), result));
-            Block.dropStack(context.getWorld(), context.getBlockPos(), context.getSide(), new ItemStack(droppedItem));
+            context.getWorld().setBlockState(context.getBlockPos(), result,
+                    Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
+            context.getWorld().emitGameEvent(GameEvent.BLOCK_CHANGE, context.getBlockPos(),
+                    GameEvent.Emitter.of(context.getPlayer(), result));
+            Block.dropStack(context.getWorld(), context.getBlockPos(), context.getSide(),
+                    new ItemStack(droppedItem));
         };
     }
     public static boolean canTillFarmland(ItemUsageContext context) {
