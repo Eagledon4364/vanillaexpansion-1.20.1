@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "vanillaexpansion:pyronite_ingot"
+    },
+    "S": {
+      "item": "minecraft:flint"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "N#N",
+    "SNS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "vanillaexpansion:pulverizing_upgrade"
+  },
+  "show_notification": true
+}

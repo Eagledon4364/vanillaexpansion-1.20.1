@@ -1,6 +1,7 @@
 package cdvj.vanillaexpansion.block;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
+import cdvj.vanillaexpansion.block.custom.ToolCraftingStationBlock;
 import cdvj.vanillaexpansion.world.feature.tree.RedwoodSaplingGenerator;
 import cdvj.vanillaexpansion.world.feature.tree.WillowSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -11,8 +12,15 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.shape.VoxelShape;
 
 public class ModBlocks {
+    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 11, 16);
+
+
+
+    public static final Block TOOL_CRAFTING_STATION = registerBlock("tool_crafting_station",
+            new ToolCraftingStationBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
     //ores
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE)));

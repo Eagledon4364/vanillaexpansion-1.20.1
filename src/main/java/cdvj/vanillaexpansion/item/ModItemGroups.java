@@ -17,6 +17,13 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.PYRONITE_PAXEL)).
                     entries((displayContext, entries) -> {
                         entries.add(ModItems.BASE_TOOL);
+                        //upgrades
+                        entries.add(ModItems.PICKAXE_UPGRADE);
+                        entries.add(ModItems.AXE_UPRGADE);
+                        entries.add(ModItems.SHOVEL_UPGRADE);
+                        entries.add(ModItems.HOE_UPGRADE);
+                        entries.add(ModItems.SMELTING_UPGRADE);
+                        entries.add(ModItems.PULVERIZING_UPGRADE);
                         //base tools
                         entries.add(ModItems.PYRONITE_PICKAXE);
                         entries.add(ModItems.PYRONITE_AXE);

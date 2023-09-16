@@ -1,4 +1,4 @@
-// 1.20.1	2023-09-11T00:14:30.2067667	Vanilla Expansion/Tags for minecraft:block
+// 1.20.1	2023-09-16T15:41:26.7340378	Vanilla Expansion/Tags for minecraft:block
 f2a8a23c8aa46bc3e0962b7f075b5f76ab757f7c data\minecraft\tags\blocks\stairs.json
 b5896f5d93acde0782483f1f27fd5935db61e56e data\minecraft\tags\blocks\leaves.json
 fb2809529edff6e14d28ae5c43067b6bc11f4953 data\minecraft\tags\blocks\planks.json
@@ -15,8 +15,8 @@ c431d8f468006c1ca2c8590e5875b78fe2bef579 data\minecraft\tags\blocks\redwood_logs
 6f57bf1f2cc9a0fa1730309a6b3c8f6172fe79da data\minecraft\tags\blocks\axel_mineable.json
 6fbebc2be508493a40fb1d8fc0d68a51af1eace3 data\minecraft\tags\blocks\cutter_mattock_mineable.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_iron_tool.json
-1bffedf9455d7ca4bedfb86e2e2ee2cd7e6e2fc4 data\minecraft\tags\blocks\fence_gates.json
 6958c2b1371fe782d8482cd8959c7cb4820339ae data\minecraft\tags\blocks\paxel_mineable.json
+1bffedf9455d7ca4bedfb86e2e2ee2cd7e6e2fc4 data\minecraft\tags\blocks\fence_gates.json
 59e5e583360a26fadfe1fc4523a3c78a3f759718 data\minecraft\tags\blocks\wooden_slabs.json
 8a23702b05296c8af5014d6aa6e9265ded85c7d9 data\minecraft\tags\blocks\needs_stone_tool.json
 b7352ee8f8493e60100ffe19f4f40f84bdb38b73 data\minecraft\tags\blocks\trapdoors.json

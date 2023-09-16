@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "vanillaexpansion:block/tool_crafting_station"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "addition": {
+    "item": "vanillaexpansion:pyronite_ingot"
+  },
+  "base": {
+    "item": "vanillaexpansion:base_tool"
+  },
+  "result": {
+    "item": "vanillaexpansion:pyronite_pickaxe"
+  },
+  "template": {
+    "item": "vanillaexpansion:pickaxe_upgrade"
+  }
+}

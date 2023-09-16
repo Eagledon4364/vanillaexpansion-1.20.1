@@ -4,6 +4,13 @@
 
   "item.vanillaexpansion.base_tool": "Base Tool",
 
+  "item.vanillaexpansion.pickaxe_upgrade": "Pickaxe Upgrade",
+  "item.vanillaexpansion.axe_upgrade": "Axe Upgrade",
+  "item.vanillaexpansion.shovel_upgrade": "Shovel Upgrade",
+  "item.vanillaexpansion.hoe_upgrade": "Hoe Upgrade",
+  "item.vanillaexpansion.smelting_upgrade": "Smelting Upgrade",
+  "item.vanillaexpansion.pulverizing_upgrade": "Pulverizing Upgrade",
+
 
   "item.vanillaexpansion.pyronite_pickaxe": "Pyronite Pickaxe",
   "item.vanillaexpansion.pyronite_axe": "Pyronite Axe",
@@ -25,6 +32,9 @@
 
   "block.vanillaexpansion.ruby_ore": "Ruby Ore",
   "block.vanillaexpansion.pyronite_ore": "Pyronite Ore",
+
+
+  "block.vanillaexpansion.tool_crafting_station": "Tool Crafting Station",
 
   "block.vanillaexpansion.willow_planks": "Willow Planks",
   "block.vanillaexpansion.willow_log": "Willow Log",

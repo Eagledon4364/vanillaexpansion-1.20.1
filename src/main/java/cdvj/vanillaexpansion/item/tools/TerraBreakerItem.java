@@ -1,6 +1,7 @@
 package cdvj.vanillaexpansion.item.tools;
 
 import cdvj.vanillaexpansion.util.CustomBlockTags;
+import cdvj.vanillaexpansion.util.LogRegistry;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Maps;
 import com.mojang.datafixers.util.Pair;
@@ -23,7 +24,9 @@ import net.minecraft.registry.tag.TagKey;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.ActionResult;
+import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
@@ -48,17 +51,34 @@ public class TerraBreakerItem extends MiningToolItem {
 
     @Override
     public ActionResult useOnBlock(ItemUsageContext context) {
-        BlockPos blockPos;
         World world = context.getWorld();
-        Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>> pair = TILLING_ACTIONS.get(world.getBlockState(blockPos = context.getBlockPos()).getBlock());
-        if (pair == null) {
+        BlockPos pos = context.getBlockPos();
+        BlockState state = world.getBlockState(pos);
+        PlayerEntity player = context.getPlayer();
+        ItemStack stack = context.getStack();
+        Pair<Predicate<ItemUsageContext>, Consumer<ItemUsageContext>> pair = TILLING_ACTIONS.get(world.getBlockState(pos = context.getBlockPos()).getBlock());
+
+
+        if (player != null) {
+            Block strippedLog = LogRegistry.getLogStrippingMap().get(state.getBlock());
+            if (strippedLog != null) {
+                if (!world.isClient) {
+                    BlockState strippedState = strippedLog.getDefaultState()
+                            .with(Properties.AXIS, state.get(Properties.AXIS));
+                    world.setBlockState(pos, strippedState);
+                    world.playSound(null, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
+                    stack.damage(1, player, (entity) -> entity.sendToolBreakStatus(context.getHand()));
+                }
+                return TypedActionResult.success(stack).getResult();
+            }
+        } if (pair == null) {
             return ActionResult.PASS;
         }
         Predicate<ItemUsageContext> predicate = pair.getFirst();
         Consumer<ItemUsageContext> consumer = pair.getSecond();
         if (predicate.test(context)) {
             PlayerEntity playerEntity = context.getPlayer();
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0f, 1.0f);
+            world.playSound(playerEntity, pos, SoundEvents.ITEM_HOE_TILL, SoundCategory.BLOCKS, 1.0f, 1.0f);
             if (!world.isClient) {
                 consumer.accept(context);
                 if (playerEntity != null) {
@@ -67,38 +87,8 @@ public class TerraBreakerItem extends MiningToolItem {
             }
             return ActionResult.success(world.isClient);
         }
-        PlayerEntity playerEntity = context.getPlayer();
-        BlockState blockState = world.getBlockState(blockPos);
-        Optional<BlockState> optional = this.getStrippedState(blockState);
-        Optional<BlockState> optional2 = Oxidizable.getDecreasedOxidationState(blockState);
-        Optional<BlockState> optional3 = Optional.ofNullable((Block)HoneycombItem.WAXED_TO_UNWAXED_BLOCKS.get().get(blockState
-                .getBlock())).map(block -> block.getStateWithProperties(blockState));
-        ItemStack itemStack = context.getStack();
-        Optional<Object> optional4 = Optional.empty();
-        if (optional.isPresent()) {
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0f, 1.0f);
 
-        } else if (optional2.isPresent()) {
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_SCRAPE, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            world.syncWorldEvent(playerEntity, WorldEvents.BLOCK_SCRAPED, blockPos, 0);
-
-        } else if (optional3.isPresent()) {
-            world.playSound(playerEntity, blockPos, SoundEvents.ITEM_AXE_WAX_OFF, SoundCategory.BLOCKS, 1.0f, 1.0f);
-            world.syncWorldEvent(playerEntity, WorldEvents.WAX_REMOVED, blockPos, 0);
-
-        }
-        if (optional4.isPresent()) {
-            if (playerEntity instanceof ServerPlayerEntity) {
-                Criteria.ITEM_USED_ON_BLOCK.trigger((ServerPlayerEntity)playerEntity, blockPos, itemStack);
-            }
-            world.setBlockState(blockPos, (BlockState)optional4.get(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            world.emitGameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Emitter.of(playerEntity, (BlockState)optional4.get()));
-            if (playerEntity != null) {
-                itemStack.damage(1, playerEntity, p -> p.sendToolBreakStatus(context.getHand()));
-            }
-            return ActionResult.success(world.isClient);
-        }
-        return ActionResult.PASS;
+        return TypedActionResult.fail(stack).getResult();
     }
 
     private Optional<BlockState> getStrippedState(BlockState state) {

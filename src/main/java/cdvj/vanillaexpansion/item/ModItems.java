@@ -8,7 +8,6 @@ import cdvj.vanillaexpansion.item.tools.TerraBreakerItem;
 import cdvj.vanillaexpansion.item.tools.CutterItem;
 import cdvj.vanillaexpansion.item.tools.RipperItem;
 import cdvj.vanillaexpansion.item.tools.*;
-import cdvj.vanillaexpansion.item.tools.PaxelItem;
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -23,6 +22,18 @@ public class ModItems {
     public static final Item RUBY = registerItem("ruby",
             new Item(new FabricItemSettings()));
     public static final Item PYRONITE_INGOT = registerItem("pyronite_ingot",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item PICKAXE_UPGRADE = registerItem("pickaxe_upgrade",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item AXE_UPRGADE = registerItem("axe_upgrade",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item SHOVEL_UPGRADE = registerItem("shovel_upgrade",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item HOE_UPGRADE = registerItem("hoe_upgrade",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item SMELTING_UPGRADE = registerItem("smelting_upgrade",
+            new Item(new FabricItemSettings().fireproof()));
+    public static final Item PULVERIZING_UPGRADE = registerItem("pulverizing_upgrade",
             new Item(new FabricItemSettings().fireproof()));
 
 
@@ -74,8 +85,7 @@ public class ModItems {
 
     //3use
     public static final Item PYRONITE_PAXEL = registerItem("pyronite_paxel",
-            new PaxelItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
-                    CustomBlockTags.PAXEL_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+            new PaxelItem(5.5f, -3.0f, ModToolMaterial.PYRONITE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item PYRONITE_CUTTER = registerItem("pyronite_cutter",
             new CutterItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
                     CustomBlockTags.PAXEL_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));

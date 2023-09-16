@@ -1,8 +1,12 @@
 package cdvj.vanillaexpansion;
 
 import cdvj.vanillaexpansion.block.ModBlocks;
+import cdvj.vanillaexpansion.screen.ModScreenHandlers;
+import cdvj.vanillaexpansion.screen.ToolCraftingStationScreen;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.minecraft.client.gui.screen.ingame.HandledScreen;
+import net.minecraft.client.gui.screen.ingame.HandledScreens;
 import net.minecraft.client.render.RenderLayer;
 
 public class VanillaExpansionClient implements ClientModInitializer {
@@ -17,6 +21,9 @@ public class VanillaExpansionClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REDWOOD_SAPLING, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REDWOOD_DOOR, RenderLayer.getCutout());
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REDWOOD_TRAPDOOR, RenderLayer.getCutout());
+
+
+        HandledScreens.register(ModScreenHandlers.TOOL_CRAFTING_SCREEN_HANDLER, ToolCraftingStationScreen::new);
 
     }
 }

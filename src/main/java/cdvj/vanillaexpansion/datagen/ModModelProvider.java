@@ -58,6 +58,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PYRONITE_INGOT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.BASE_TOOL, Models.GENERATED);
+        //upgrades
+        itemModelGenerator.register(ModItems.AXE_UPRGADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PICKAXE_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SHOVEL_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.HOE_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.SMELTING_UPGRADE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PULVERIZING_UPGRADE, Models.GENERATED);
         //1
         itemModelGenerator.register(ModItems.PYRONITE_PICKAXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_SHOVEL, Models.GENERATED);
