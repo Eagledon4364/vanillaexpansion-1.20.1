@@ -85,13 +85,17 @@ public class ModItems {
 
     //3use
     public static final Item PYRONITE_PAXEL = registerItem("pyronite_paxel",
-            new PaxelItem(5.5f, -3.0f, ModToolMaterial.PYRONITE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+            new PaxelItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
+                    CustomBlockTags.PAXEL_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item PYRONITE_CUTTER = registerItem("pyronite_cutter",
             new CutterItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
-                    CustomBlockTags.PAXEL_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+                    CustomBlockTags.CUTTER_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
     public static final Item PYRONITE_RIPPER = registerItem("pyronite_ripper",
             new RipperItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
-                    CustomBlockTags.PAXEL_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+                    CustomBlockTags.RIPPER_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item PYRONITE_SCOOP = registerItem("pyronite_scoop",
+            new RipperItem(5.5f, -3.0f, ModToolMaterial.PYRONITE,
+                    CustomBlockTags.SCOOP_MINEABLE, new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
 
 
     //TERRABREAKER

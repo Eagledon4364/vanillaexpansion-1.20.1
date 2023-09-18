@@ -1,0 +1,14 @@
+{
+  "type": "vanillaexpansion:tool_crafting",
+  "ingredients": [
+    {
+      "item": "vanillaexpansion:pyronite_axe"
+    },
+    {
+      "item": "vanillaexpansion:pickaxe_upgrade"
+    }
+  ],
+  "output": {
+    "item": "vanillaexpansion:pyronite_axel"
+  }
+}

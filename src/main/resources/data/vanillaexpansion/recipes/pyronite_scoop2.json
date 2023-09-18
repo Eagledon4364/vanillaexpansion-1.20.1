@@ -1,0 +1,14 @@
+{
+  "type": "vanillaexpansion:tool_crafting",
+  "ingredients": [
+    {
+      "item": "vanillaexpansion:pyronite_scythe"
+    },
+    {
+      "item": "vanillaexpansion:shovel_upgrade"
+    }
+  ],
+  "output": {
+    "item": "vanillaexpansion:pyronite_scoop"
+  }
+}

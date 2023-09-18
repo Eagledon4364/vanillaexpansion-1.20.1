@@ -36,10 +36,5 @@
 	},
 	"suggests": {
 		"another-mod": "*"
-	},
-	"jars": [
-		{
-			"file": "META-INF/jars/toolhelper.jar"
-		}
-	]
+	}
 }

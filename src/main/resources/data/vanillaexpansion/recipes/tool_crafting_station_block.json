@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "S": {
+      "item": "minecraft:netherite_block"
+    },
+    "N": {
+      "item": "vanillaexpansion:pyronite_ingot"
+    }
+  },
+  "pattern": [
+    "SNS",
+    "NSN",
+    "SNS"
+  ],
+  "result": {
+    "count": 1,
+    "item": "vanillaexpansion:tool_crafting_station"
+  },
+  "show_notification": true
+}

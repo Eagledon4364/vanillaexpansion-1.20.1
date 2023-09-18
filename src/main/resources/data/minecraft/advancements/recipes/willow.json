@@ -10,28 +10,11 @@
         ]
       },
       "trigger": "minecraft:inventory_changed"
-    },
-    "has_the_recipe": {
-      "conditions": {
-        "recipes": [
-          "vanillaexpansion:willow_planks",
-          "vanillaexpansion:willow_wood",
-          "vanillaexpansion:stripped_willow_wood",
-          "vanillaexpansion:willow_door",
-          "vanillaexpansion:willow_trapdoor",
-          "vanillaexpansion:willow_fence",
-          "vanillaexpansion:willow_fence_gate",
-          "vanillaexpansion:willow_button",
-          "vanillaexpansion:willow_pressure_plate"
-        ]
-      },
-      "trigger": "minecraft:recipe_unlocked"
     }
   },
   "requirements": [
     [
-      "has_log",
-      "has_the_recipe"
+      "has_log"
     ]
   ],
   "rewards": {

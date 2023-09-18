@@ -1,0 +1,14 @@
+{
+  "type": "vanillaexpansion:tool_crafting",
+  "ingredients": [
+    {
+      "item": "vanillaexpansion:pyronite_shovel"
+    },
+    {
+      "item": "vanillaexpansion:axe_upgrade"
+    }
+  ],
+  "output": {
+    "item": "vanillaexpansion:pyronite_cutter_mattock"
+  }
+}

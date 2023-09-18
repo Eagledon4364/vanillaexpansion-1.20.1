@@ -212,6 +212,11 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .addTag(BlockTags.PICKAXE_MINEABLE)
                 .addTag(BlockTags.HOE_MINEABLE)
         ;
+        getOrCreateTagBuilder(CustomBlockTags.SCOOP_MINEABLE)
+                .addTag(BlockTags.SHOVEL_MINEABLE)
+                .addTag(BlockTags.PICKAXE_MINEABLE)
+                .addTag(BlockTags.HOE_MINEABLE)
+        ;
 
 
         //4

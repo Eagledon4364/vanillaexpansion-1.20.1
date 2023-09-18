@@ -3,13 +3,13 @@ package cdvj.vanillaexpansion.block.custom;
 
 import cdvj.vanillaexpansion.block.ModBlockEntities;
 import cdvj.vanillaexpansion.block.entity.ToolCraftingStationBlockEntity;
-import cdvj.vanillaexpansion.registry.ModBlockEntityType;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityTicker;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.util.ActionResult;
@@ -28,10 +28,6 @@ public class ToolCraftingStationBlock extends BlockWithEntity implements BlockEn
     public  ToolCraftingStationBlock(Settings settings) {
         super(settings);
     }
-
-    private static final VoxelShape SHAPE =
-            Block.createCuboidShape(0, 0, 0, 16, 11, 16);
-
     @Nullable
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
@@ -54,7 +50,7 @@ public class ToolCraftingStationBlock extends BlockWithEntity implements BlockEn
         if (state.getBlock() != newState.getBlock()) {
             BlockEntity blockEntity = world.getBlockEntity(pos);
             if (blockEntity instanceof ToolCraftingStationBlockEntity) {
-                ItemScatterer.spawn(world, pos, (ToolCraftingStationBlockEntity)blockEntity);
+                ItemScatterer.spawn(world, pos, (Inventory) blockEntity);
                 world.updateComparators(pos, this);
             }
         }

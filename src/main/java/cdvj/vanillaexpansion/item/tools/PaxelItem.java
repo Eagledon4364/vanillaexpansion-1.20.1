@@ -12,6 +12,7 @@ import net.minecraft.item.MiningToolItem;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.registry.tag.TagKey;
 import net.minecraft.sound.SoundCategory;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.state.property.Properties;
@@ -27,7 +28,7 @@ public class PaxelItem extends MiningToolItem {
 
     private final Map<Block, Block> logStrippingMap = new HashMap<>();
 
-    public PaxelItem(float attackDamage, float attackSpeed, ToolMaterial material, Settings settings) {
+    public PaxelItem(float attackDamage, float attackSpeed, ToolMaterial material, TagKey<Block> effectiveBlocks, Settings settings) {
         super(attackDamage, attackSpeed, material, CustomBlockTags.PAXEL_MINEABLE, settings);
     }
 

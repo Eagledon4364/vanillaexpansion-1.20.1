@@ -14,22 +14,19 @@ public class ToolCraftingStationScreenHandler extends ScreenHandler {
     private final Inventory inventory;
     private final PropertyDelegate propertyDelegate;
     public ToolCraftingStationScreenHandler(int syncId, PlayerInventory playerInventory) {
-        this(syncId, playerInventory, new SimpleInventory(6), new ArrayPropertyDelegate(2));
+        this(syncId, playerInventory, new SimpleInventory(3), new ArrayPropertyDelegate(2));
     }
     public ToolCraftingStationScreenHandler(int syncId, PlayerInventory playerInventory,
                                                Inventory inventory, PropertyDelegate delegate) {
         super(ModScreenHandlers.TOOL_CRAFTING_SCREEN_HANDLER, syncId);
-        checkSize(inventory, 6);
+        checkSize(inventory, 3);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
             this.propertyDelegate = delegate;
 
-            this.addSlot(new Slot(inventory, 0,7 ,10 ));
-            this.addSlot(new Slot(inventory, 1,79 ,10 ));
-            this.addSlot(new Slot(inventory, 2,43 ,34 ));
-            this.addSlot(new Slot(inventory, 3,7 ,57 ));
-            this.addSlot(new Slot(inventory, 4,79 ,57 ));
-            this.addSlot(new Slot(inventory, 5,141 ,30 ));
+            this.addSlot(new Slot(inventory, 0,21 ,35 ));
+            this.addSlot(new Slot(inventory, 1,60 ,35 ));
+            this.addSlot(new Slot(inventory, 2,128 ,35 ));
 
 
 
@@ -42,21 +39,21 @@ public class ToolCraftingStationScreenHandler extends ScreenHandler {
 
     }
     public boolean isCrafting() {
-        return propertyDelegate.get(2) > 0;
+        return propertyDelegate.get(0) > 0;
     }
     public int getScaledProgress() {
-        int progress = this.propertyDelegate.get(2);
-        int maxProgress = this.propertyDelegate.get(2);
-        int progressArrowSize = 26;
+        int progress = this.propertyDelegate.get(1);
+        int maxProgress = this.propertyDelegate.get(1);
+        int progressArrowSize = 24;
 
-        return maxProgress != 2 && progress != 2 ? progress * progressArrowSize / maxProgress : 2;
+        return maxProgress != 1 && progress != 1 ? progress * progressArrowSize / maxProgress : 1;
     }
 
 
     @Override
     public ItemStack quickMove(PlayerEntity player, int slot) {
         ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot2 = (Slot)this.slots.get(slot);
+        Slot slot2 = this.slots.get(slot);
         if (slot2 != null && slot2.hasStack()) {
             ItemStack itemStack2 = slot2.getStack();
             itemStack = itemStack2.copy();

@@ -1,13 +1,15 @@
 package cdvj.vanillaexpansion.block.entity;
 
+import cdvj.vanillaexpansion.block.ModBlockEntities;
 import cdvj.vanillaexpansion.item.ModItems;
-import cdvj.vanillaexpansion.registry.ModBlockEntityType;
+import cdvj.vanillaexpansion.recipe.ToolCraftingRecipe;
 import cdvj.vanillaexpansion.screen.ToolCraftingStationScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
+import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -21,15 +23,17 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 public class ToolCraftingStationBlockEntity extends BlockEntity implements NamedScreenHandlerFactory, ImplementedInventory {
     private final DefaultedList<ItemStack> inventory =
-            DefaultedList.ofSize(6, ItemStack.EMPTY);
+            DefaultedList.ofSize(3, ItemStack.EMPTY);
     protected final PropertyDelegate propertyDelegate;
     private int progress = 0;
-    private int maxProgress = 72;
+    private int maxProgress = 50;
     public ToolCraftingStationBlockEntity(BlockPos pos, BlockState state) {
         
-        super(ModBlockEntityType.TOOL_CRAFTING_STATION, pos, state);
+        super(ModBlockEntities.TOOL_CRAFTING_STATION, pos, state);
         this.propertyDelegate = new PropertyDelegate() {
             public int get(int index) {
                 switch (index) {
@@ -68,6 +72,11 @@ public class ToolCraftingStationBlockEntity extends BlockEntity implements Named
     }
 
     @Override
+    public void markDirty() {
+        super.markDirty();
+    }
+
+    @Override
     protected void writeNbt(NbtCompound nbt) {
         super.writeNbt(nbt);
         Inventories.writeNbt(nbt, inventory);
@@ -80,6 +89,7 @@ public class ToolCraftingStationBlockEntity extends BlockEntity implements Named
         super.readNbt(nbt);
         progress = nbt.getInt("tool_crafting_station.progress");
     }
+
 
     public static void tick(World world, BlockPos blockPos, BlockState state, ToolCraftingStationBlockEntity entity) {
         if(world.isClient()) {
@@ -106,12 +116,17 @@ public class ToolCraftingStationBlockEntity extends BlockEntity implements Named
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
+
+        Optional<ToolCraftingRecipe> recipe = entity.getWorld().getRecipeManager()
+                .getFirstMatch(ToolCraftingRecipe.Type.INSTANCE, inventory, entity.getWorld());
+
         if(hasrecipe(entity)) {
-            entity.removeStack(2, 1);
+            entity.removeStack(1, 1);
             entity.removeStack(0, 1);
 
-            entity.setStack(5, new ItemStack(ModItems.PYRONITE_AXE, entity.getStack(5).getCount() +
-                    1));
+            entity.setStack(2, new ItemStack(recipe.get().getOutput().getItem(),
+                    entity.getStack(2).getCount() + 1));
+            entity.resetProgress();
         }
 
         
@@ -122,18 +137,18 @@ public class ToolCraftingStationBlockEntity extends BlockEntity implements Named
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
-        boolean hasToolItemInSlot = entity.getStack(2).getItem() == ModItems.BASE_TOOL;
-        boolean hasUpgradeItemInSlot = entity.getStack(0).getItem() == ModItems.AXE_UPRGADE;
+        Optional<ToolCraftingRecipe> match = entity.getWorld().getRecipeManager()
+                .getFirstMatch(ToolCraftingRecipe.Type.INSTANCE, inventory, entity.getWorld());
 
-        return hasToolItemInSlot && hasUpgradeItemInSlot && canInsertAmountInOutputSlot(inventory)
-                && canInsertItemIntoOutputSlot(inventory, ModItems.PYRONITE_AXE);
+        return match.isPresent() && canInsertAmountInOutputSlot(inventory)
+                && canInsertItemIntoOutputSlot(inventory, match.get().getOutput().getItem());
     }
 
     private static boolean canInsertItemIntoOutputSlot(SimpleInventory inventory, Item output) {
-        return inventory.getStack(5).getItem() == output || inventory.getStack(5).isEmpty();
+        return inventory.getStack(2).getItem() == output || inventory.getStack(5).isEmpty();
     }
 
     private static boolean canInsertAmountInOutputSlot(SimpleInventory inventory) {
-        return inventory.getStack(5).getMaxCount() > inventory.getStack(5).getCount();
+        return inventory.getStack(2).getMaxCount() > inventory.getStack(2).getCount();
     }
 }

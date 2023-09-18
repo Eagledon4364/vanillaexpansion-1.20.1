@@ -1,0 +1,15 @@
+
+{
+  "type": "vanillaexpansion:tool_crafting",
+  "ingredients": [
+    {
+      "item": "vanillaexpansion:pyronite_mattock"
+    },
+    {
+      "item": "vanillaexpansion:hoe_upgrade"
+    }
+  ],
+  "output": {
+    "item": "vanillaexpansion:pyronite_scoop"
+  }
+}

@@ -23,7 +23,8 @@ public class VanillaExpansionClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.REDWOOD_TRAPDOOR, RenderLayer.getCutout());
 
 
-        HandledScreens.register(ModScreenHandlers.TOOL_CRAFTING_SCREEN_HANDLER, ToolCraftingStationScreen::new);
+        HandledScreens.register(ModScreenHandlers.TOOL_CRAFTING_SCREEN_HANDLER,
+                ToolCraftingStationScreen::new);
 
     }
 }

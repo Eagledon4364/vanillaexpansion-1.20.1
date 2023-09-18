@@ -14,15 +14,6 @@
     "has_the_recipe": {
       "conditions": {
         "recipes": [
-          "vanillaexpansion:redwood_planks",
-          "vanillaexpansion:redwood_wood",
-          "vanillaexpansion:stripped_redwood_wood",
-          "vanillaexpansion:redwood_door",
-          "vanillaexpansion:redwood_trapdoor",
-          "vanillaexpansion:redwood_fence",
-          "vanillaexpansion:redwood_fence_gate",
-          "vanillaexpansion:redwood_button",
-          "vanillaexpansion:redwood_pressure_plate"
         ]
       },
       "trigger": "minecraft:recipe_unlocked"

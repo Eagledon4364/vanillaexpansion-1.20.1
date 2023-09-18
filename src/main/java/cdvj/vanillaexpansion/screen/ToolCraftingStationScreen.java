@@ -29,13 +29,13 @@ public class ToolCraftingStationScreen extends HandledScreen<ToolCraftingStation
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
-        drawForeground(context, x, y, 0, 0, backgroundWidth, backgroundHeight);
-        
+        context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
 
 
-    }
+        if(handler.isCrafting()) {
+            context.drawTexture(TEXTURE, x + 89, y + 36, 176, 0, this.handler.getScaledProgress(), 16);
+        }
 
-    private void drawForeground(DrawContext context, int x, int y, int i, int i1, int backgroundWidth, int backgroundHeight) {
     }
 
     @Override

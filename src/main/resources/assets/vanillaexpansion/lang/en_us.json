@@ -4,6 +4,8 @@
 
   "item.vanillaexpansion.base_tool": "Base Tool",
 
+  "tool_crafting_station": "Tool Crafting Station",
+
   "item.vanillaexpansion.pickaxe_upgrade": "Pickaxe Upgrade",
   "item.vanillaexpansion.axe_upgrade": "Axe Upgrade",
   "item.vanillaexpansion.shovel_upgrade": "Shovel Upgrade",
@@ -27,6 +29,7 @@
   "item.vanillaexpansion.pyronite_paxel": "Pyronite Paxel",
   "item.vanillaexpansion.pyronite_cutter": "Pyronite Cutter",
   "item.vanillaexpansion.pyronite_ripper": "Pyronite Ripper",
+  "item.vanillaexpansion.pyronite_scoop": "Pyronite Scoop",
 
   "item.vanillaexpansion.pyronite_terra_breaker": "Pyronite Terra Breaker",
 

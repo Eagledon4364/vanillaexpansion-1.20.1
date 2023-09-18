@@ -81,6 +81,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.PYRONITE_PAXEL, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_RIPPER, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_CUTTER, Models.GENERATED);
+        itemModelGenerator.register(ModItems.PYRONITE_SCOOP, Models.GENERATED);
         //4
         itemModelGenerator.register(ModItems.PYRONITE_TERRA_BREAKER, Models.GENERATED);
     }

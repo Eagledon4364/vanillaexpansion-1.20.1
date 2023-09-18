@@ -28,6 +28,7 @@ public class CustomBlockTags {
     public static final TagKey<Block> PAXEL_MINEABLE = of("paxel_mineable");
     public static final TagKey<Block> CUTTER_MINEABLE = of("cutter_mineable");
     public static final TagKey<Block> RIPPER_MINEABLE = of("ripper_mineable");
+    public static final TagKey<Block> SCOOP_MINEABLE = of("ripper_mineable");
 
     //4
     public static final TagKey<Block> TERRABREAKER_MINEABLE = of("terrabreaker_mineable");

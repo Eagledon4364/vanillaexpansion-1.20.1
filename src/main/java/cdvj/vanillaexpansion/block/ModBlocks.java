@@ -7,20 +7,20 @@ import cdvj.vanillaexpansion.world.feature.tree.WillowSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
+import net.minecraft.client.sound.Sound;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.shape.VoxelShape;
 
 public class ModBlocks {
-    private static final VoxelShape SHAPE = Block.createCuboidShape(0, 0, 0, 16, 11, 16);
-
 
 
     public static final Block TOOL_CRAFTING_STATION = registerBlock("tool_crafting_station",
-            new ToolCraftingStationBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque()));
+            new ToolCraftingStationBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque().dynamicBounds()));
     //ores
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE)));

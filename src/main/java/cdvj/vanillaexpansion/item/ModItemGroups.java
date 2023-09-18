@@ -40,6 +40,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PYRONITE_PAXEL);
                         entries.add(ModItems.PYRONITE_CUTTER);
                         entries.add(ModItems.PYRONITE_RIPPER);
+                        entries.add(ModItems.PYRONITE_SCOOP);
                         //terrabreaker
                         entries.add(ModItems.PYRONITE_TERRA_BREAKER);
 
@@ -48,6 +49,7 @@ public class ModItemGroups {
             new Identifier(VanillaExpansion.MOD_ID, "ruby"),
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.ruby"))
                     .icon(() -> new ItemStack(ModItems.RUBY)).entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.TOOL_CRAFTING_STATION);
                         //ores and drops
                         entries.add(ModItems.RUBY);
                         entries.add(ModBlocks.RUBY_ORE);
