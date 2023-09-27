@@ -1,20 +1,18 @@
 package cdvj.vanillaexpansion.block;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
+import cdvj.vanillaexpansion.block.custom.StrawberryBushBlock;
 import cdvj.vanillaexpansion.block.custom.ToolCraftingStationBlock;
 import cdvj.vanillaexpansion.world.feature.tree.RedwoodSaplingGenerator;
 import cdvj.vanillaexpansion.world.feature.tree.WillowSaplingGenerator;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.*;
-import net.minecraft.client.sound.Sound;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
-import net.minecraft.sound.SoundCategory;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.shape.VoxelShape;
 
 public class ModBlocks {
 
@@ -24,8 +22,25 @@ public class ModBlocks {
     //ores
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE)));
+    public static final Block TUNGSTEN_ORE = registerBlock("tungsten_ore",
+            new Block(FabricBlockSettings.copyOf(Blocks.IRON_ORE)));
     public static final Block PYRONITE_ORE = registerBlock("pyronite_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.ANCIENT_DEBRIS)));
+    //plants
+    public static final Block STRAWBERRY_BUSH = registerBlock("strawberry_bush",
+            new StrawberryBushBlock(FabricBlockSettings.copyOf(Blocks.SWEET_BERRY_BUSH)));
+
+    //ancient dimension blocks
+    public static final Block ANCIENT_STONE = registerBlock("ancient_stone",
+            new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block ANCIENT_STONE_SLAB = registerBlock("ancient_stone_slab",
+            new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE_SLAB).nonOpaque()));
+    public static final Block ANCIENT_STONE_STAIRS = registerBlock("ancient_stone_stairs",
+            new StairsBlock(ModBlocks.ANCIENT_STONE.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.STONE_STAIRS).nonOpaque()));
+    public static final Block ANCIENT_STONE_WALL = registerBlock("ancient_stone_wall",
+            new WallBlock(FabricBlockSettings.copyOf(Blocks.COBBLESTONE_WALL).nonOpaque()));
+
     //trees
     public static final Block WILLOW_PLANKS = registerBlock("willow_planks",
             new Block(FabricBlockSettings.copyOf(Blocks.OAK_PLANKS)));
@@ -72,11 +87,14 @@ public class ModBlocks {
     public static final Block REDWOOD_SLAB = registerBlock("redwood_slab",
             new SlabBlock(FabricBlockSettings.copyOf(Blocks.OAK_SLAB).nonOpaque()));
     public static final Block REDWOOD_STAIRS = registerBlock("redwood_stairs",
-            new StairsBlock(ModBlocks.WILLOW_PLANKS.getDefaultState(), FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).nonOpaque()));
+            new StairsBlock(ModBlocks.WILLOW_PLANKS.getDefaultState(),
+                    FabricBlockSettings.copyOf(Blocks.OAK_STAIRS).nonOpaque()));
     public static final Block REDWOOD_PRESSURE_PLATE = registerBlock("redwood_pressure_plate",
-            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
+            new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING,
+                    FabricBlockSettings.copyOf(Blocks.OAK_PRESSURE_PLATE), BlockSetType.OAK));
     public static final Block REDWOOD_BUTTON = registerBlock("redwood_button",
-            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), BlockSetType.OAK, 10, true));
+            new ButtonBlock(FabricBlockSettings.copyOf(Blocks.OAK_BUTTON), BlockSetType.OAK,
+                    10, true));
     public static final Block REDWOOD_FENCE = registerBlock("redwood_fence",
             new FenceBlock(FabricBlockSettings.copyOf(Blocks.OAK_FENCE)));
     public static final Block REDWOOD_FENCE_GATE = registerBlock("redwood_fence_gate",
@@ -94,6 +112,9 @@ public class ModBlocks {
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, new Identifier(VanillaExpansion.MOD_ID, name), block);
+    }
+    private static Block registerBlockWithoutItem(String name, Block block) {
         return Registry.register(Registries.BLOCK, new Identifier(VanillaExpansion.MOD_ID, name), block);
     }
 

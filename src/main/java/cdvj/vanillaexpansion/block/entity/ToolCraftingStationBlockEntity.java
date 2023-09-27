@@ -6,6 +6,7 @@ import cdvj.vanillaexpansion.recipe.ToolCraftingRecipe;
 import cdvj.vanillaexpansion.screen.ToolCraftingStationScreenHandler;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.Inventories;
@@ -116,6 +117,9 @@ public class ToolCraftingStationBlockEntity extends BlockEntity implements Named
         for (int i = 0; i < entity.size(); i++) {
             inventory.setStack(i, entity.getStack(i));
         }
+
+
+
 
         Optional<ToolCraftingRecipe> recipe = entity.getWorld().getRecipeManager()
                 .getFirstMatch(ToolCraftingRecipe.Type.INSTANCE, inventory, entity.getWorld());

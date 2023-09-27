@@ -18,6 +18,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateBlockStateModels(BlockStateModelGenerator blockStateModelGenerator) {
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.PYRONITE_ORE);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.RUBY_ORE);
+        blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.TUNGSTEN_ORE);
 
         //willow
         blockStateModelGenerator.registerLog(ModBlocks.WILLOW_LOG).log(ModBlocks.WILLOW_LOG).wood(ModBlocks.WILLOW_WOOD);
@@ -49,6 +50,14 @@ public class ModModelProvider extends FabricModelProvider {
         REDWOOD_POOL.stairs(ModBlocks.REDWOOD_STAIRS);
         blockStateModelGenerator.registerTintableCrossBlockState(ModBlocks.REDWOOD_SAPLING, BlockStateModelGenerator.TintType.NOT_TINTED);
 
+        //ancient stone
+        BlockStateModelGenerator.BlockTexturePool ANCIENT_STONE_POOL = blockStateModelGenerator.registerCubeAllModelTexturePool(ModBlocks.ANCIENT_STONE);
+        ANCIENT_STONE_POOL.stairs(ModBlocks.ANCIENT_STONE_STAIRS);
+        ANCIENT_STONE_POOL.slab(ModBlocks.ANCIENT_STONE_SLAB);
+        ANCIENT_STONE_POOL.wall(ModBlocks.ANCIENT_STONE_WALL);
+
+
+
 
     }
 
@@ -56,6 +65,18 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_INGOT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_INGOT, Models.GENERATED);
+        //food
+        itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
+        itemModelGenerator.register(ModItems.STRAWBERRY_PIE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TECH_BOOTS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TECH_CHESTPLATE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TECH_HELMET, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TECH_LEGGINGS, Models.GENERATED);
+
+
 
         itemModelGenerator.register(ModItems.BASE_TOOL, Models.GENERATED);
         //upgrades
@@ -65,6 +86,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HOE_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SMELTING_UPGRADE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PULVERIZING_UPGRADE, Models.GENERATED);
+
+        itemModelGenerator.register(ModItems.TUNGSTEN_SHOVEL, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_AXE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_HOE, Models.GENERATED);
+        itemModelGenerator.register(ModItems.TUNGSTEN_PICKAXE, Models.GENERATED);
         //1
         itemModelGenerator.register(ModItems.PYRONITE_PICKAXE, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_SHOVEL, Models.GENERATED);

@@ -60,6 +60,12 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         addDrop(ModBlocks.RUBY_ORE, copperLikeOreDrops(ModBlocks.RUBY_ORE, ModItems.RUBY));
         addDrop(ModBlocks.PYRONITE_ORE);
+        addDrop(ModBlocks.PYRONITE_ORE, oreLikeDrops(ModBlocks.TUNGSTEN_ORE, ModItems.RAW_TUNGSTEN));
+        //ancient stone
+        addDrop(ModBlocks.ANCIENT_STONE);
+        addDrop(ModBlocks.ANCIENT_STONE_WALL);
+        addDrop(ModBlocks.ANCIENT_STONE_STAIRS);
+        addDrop(ModBlocks.ANCIENT_STONE_SLAB, slabDrops(ModBlocks.ANCIENT_STONE_SLAB));
 
 
 
@@ -68,8 +74,17 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
 
     }
+
+
+
+    public LootTable.Builder oreLikeDrops(Block dropWithSilkTouch, Item drop) {
+        return BlockLootTableGenerator.dropsWithSilkTouch(dropWithSilkTouch,
+                (LootPoolEntry.Builder)this.applyExplosionDecay(dropWithSilkTouch,
+                        ItemEntry.builder(drop).apply(ApplyBonusLootFunction.oreDrops(Enchantments.FORTUNE))));
+    }
     public LootTable.Builder copperLikeOreDrops(Block drop, Item item) {
-        return BlockLootTableGenerator.dropsWithSilkTouch(drop, (LootPoolEntry.Builder)this.applyExplosionDecay(drop,
+        return BlockLootTableGenerator.dropsWithSilkTouch(drop,
+                (LootPoolEntry.Builder)this.applyExplosionDecay(drop,
                 ((LeafEntry.Builder)
                         ItemEntry.builder(item)
                                 .apply(SetCountLootFunction

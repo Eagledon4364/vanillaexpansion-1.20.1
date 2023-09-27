@@ -17,6 +17,10 @@ public class ModItemGroups {
                     .icon(() -> new ItemStack(ModItems.PYRONITE_PAXEL)).
                     entries((displayContext, entries) -> {
                         entries.add(ModItems.BASE_TOOL);
+                        entries.add(ModItems.TUNGSTEN_AXE);
+                        entries.add(ModItems.TUNGSTEN_PICKAXE);
+                        entries.add(ModItems.TUNGSTEN_SHOVEL);
+                        entries.add(ModItems.TUNGSTEN_HOE);
                         //upgrades
                         entries.add(ModItems.PICKAXE_UPGRADE);
                         entries.add(ModItems.AXE_UPRGADE);
@@ -43,6 +47,11 @@ public class ModItemGroups {
                         entries.add(ModItems.PYRONITE_SCOOP);
                         //terrabreaker
                         entries.add(ModItems.PYRONITE_TERRA_BREAKER);
+                        //armor
+                        entries.add(ModItems.TECH_HELMET);
+                        entries.add(ModItems.TECH_CHESTPLATE);
+                        entries.add(ModItems.TECH_LEGGINGS);
+                        entries.add(ModItems.TECH_BOOTS);
 
                     }).build());
     public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
@@ -55,6 +64,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.RUBY_ORE);
                         entries.add(ModItems.PYRONITE_INGOT);
                         entries.add(ModBlocks.PYRONITE_ORE);
+                        entries.add(ModBlocks.TUNGSTEN_ORE);
+                        entries.add(ModItems.RAW_TUNGSTEN);
+                        entries.add(ModItems.TUNGSTEN_INGOT);
+                        //food
+                        entries.add(ModItems.STRAWBERRY);
+                        entries.add(ModItems.STRAWBERRY_PIE);
                         //willow
                         entries.add(ModBlocks.WILLOW_LOG);
                         entries.add(ModBlocks.STRIPPED_WILLOW_LOG);
@@ -87,6 +102,12 @@ public class ModItemGroups {
                         entries.add(ModBlocks.REDWOOD_FENCE_GATE);
                         entries.add(ModBlocks.REDWOOD_BUTTON);
                         entries.add(ModBlocks.REDWOOD_PRESSURE_PLATE);
+
+                        //Ancient stone
+                        entries.add(ModBlocks.ANCIENT_STONE);
+                        entries.add(ModBlocks.ANCIENT_STONE_STAIRS);
+                        entries.add(ModBlocks.ANCIENT_STONE_SLAB);
+                        entries.add(ModBlocks.ANCIENT_STONE_WALL);
 
 
                     }).build());

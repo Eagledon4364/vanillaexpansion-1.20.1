@@ -1,8 +1,54 @@
 {
+
+  "tooltip.adze_item1": "Axe",
+  "tooltip.adze_item2": "hoe",
+
+  "tooltip.axel_item1": "Axe",
+  "tooltip.axel_item2": "Pickaxe",
+
+  "tooltip.cutter_item1": "Axe",
+  "tooltip.cutter_item2": "Shovel",
+  "tooltip.cutter_item3": "hoe",
+
+  "tooltip.cutter_mattock_item1": "Axe",
+  "tooltip.cutter_mattock_item2": "Shovel",
+
+  "tooltip.mattock_item1": "Pickaxe",
+  "tooltip.mattock_item2": "Shovel",
+
+  "tooltip.paxel_item1": "Axe",
+  "tooltip.paxel_item2": "Pickaxe",
+  "tooltip.paxel_item3": "Shovel",
+
+  "tooltip.ripper_item1": "Axe",
+  "tooltip.ripper_item2": "Pickaxe",
+  "tooltip.ripper_item3": "hoe",
+
+  "tooltip.scoop_item1": "Pickaxe",
+  "tooltip.scoop_item2": "Shovel",
+  "tooltip.scoop_item3": "hoe",
+
+  "tooltip.scythe_item1": "Pickaxe",
+  "tooltip.scythe_item2": "hoe",
+
+  "tooltip.terra_breaker_item1": "Axe",
+  "tooltip.terra_breaker_item2": "Pickaxe",
+  "tooltip.terra_breaker_item3": "Shovel",
+  "tooltip.terra_breaker_item4": "hoe",
+
+  "tooltip.trowel_item1": "Shovel",
+  "tooltip.trowel_item2": "hoe",
+
+
   "item.vanillaexpansion.ruby": "Ruby",
   "item.vanillaexpansion.pyronite_ingot": "Pyronite Ingot",
 
   "item.vanillaexpansion.base_tool": "Base Tool",
+
+  "item.vanillaexpansion.tech_helmet": "Tech Helmet",
+  "item.vanillaexpansion.tech_chestplate": "Tech Chestplate",
+  "item.vanillaexpansion.tech_boots": "Tech Boots",
+  "item.vanillaexpansion.tech_leggings": "Tech Leggings",
 
   "tool_crafting_station": "Tool Crafting Station",
 
@@ -12,6 +58,21 @@
   "item.vanillaexpansion.hoe_upgrade": "Hoe Upgrade",
   "item.vanillaexpansion.smelting_upgrade": "Smelting Upgrade",
   "item.vanillaexpansion.pulverizing_upgrade": "Pulverizing Upgrade",
+
+
+  "item.vanillaexpansion.strawberry": "Strawberry",
+  "item.vanillaexpansion.strawberry_pie": "Strawberry Pie",
+  "item.vanillaexpansion.tungsten_ingot": "Tungsten",
+  "item.vanillaexpansion.raw_tungsten": "Raw Tungsten",
+
+
+  "item.vanillaexpansion.ancient_water_bucket": "Acnient Water Bucket",
+
+
+  "item.vanillaexpansion.tungsten_axe": "Tungsten Axe",
+  "item.vanillaexpansion.tungsten_pickaxe": "Tungsten Pickaxe",
+  "item.vanillaexpansion.tungsten_shovel": "Tungsten Shovel",
+  "item.vanillaexpansion.tungsten_hoe": "Tungsten Hoe",
 
 
   "item.vanillaexpansion.pyronite_pickaxe": "Pyronite Pickaxe",
@@ -35,6 +96,12 @@
 
   "block.vanillaexpansion.ruby_ore": "Ruby Ore",
   "block.vanillaexpansion.pyronite_ore": "Pyronite Ore",
+  "block.vanillaexpansion.tungsten_ore": "Tungsten Ore",
+
+  "block.vanillaexpansion.ancient_stone": "Ancient Stone",
+  "block.vanillaexpansion.ancient_stone_stairs": "Ancient Stone Stairs",
+  "block.vanillaexpansion.ancient_stone_slab": "Ancient Stone Slab",
+  "block.vanillaexpansion.ancient_stone_wall": "Ancient Stone Wall",
 
 
   "block.vanillaexpansion.tool_crafting_station": "Tool Crafting Station",

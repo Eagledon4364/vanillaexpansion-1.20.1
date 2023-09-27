@@ -2,6 +2,7 @@ package cdvj.vanillaexpansion.recipe;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
+import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.inventory.SimpleInventory;
 import net.minecraft.item.ItemStack;
 import net.minecraft.network.PacketByteBuf;
@@ -23,6 +24,7 @@ public class ToolCraftingRecipe implements Recipe<SimpleInventory> {
         this.output = output;
         this.recipeItems = recipeItems;
     }
+
     @Override
     public boolean matches(SimpleInventory inventory, World world) {
         if(world.isClient) {
@@ -34,9 +36,11 @@ public class ToolCraftingRecipe implements Recipe<SimpleInventory> {
         return false;
     }
 
+
     @Override
     public ItemStack craft(SimpleInventory inventory, DynamicRegistryManager registryManager) {
-        return output;
+        ItemStack outputStack = this.output.copy();
+        return outputStack;
     }
 
     @Override
@@ -111,8 +115,24 @@ public class ToolCraftingRecipe implements Recipe<SimpleInventory> {
             buf.writeItemStack(recipe.getOutput());
         }
     }
+    public void addEnchantment(SimpleInventory inventory) {
+
+        ItemStack outputStack = this.output.copy();
+        for (int i = 0; i < inventory.size(); i++) {
+            ItemStack inputStack = inventory.getStack(i);
+            if (!inputStack.isEmpty()) {
+                EnchantmentHelper.get(inputStack).forEach(((enchantment, level) -> {
+                    if (outputStack.isEnchantable()) {
+                        outputStack.addEnchantment(enchantment, level);
+                    }
+                }));
+
+            }
+        }
+    }
 
     public ItemStack getOutput() {
+
         return output.copy();
     }
 }

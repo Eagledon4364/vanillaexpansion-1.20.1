@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
+import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Mod;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -22,6 +23,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(ModBlocks.ANCIENT_STONE)
+                .add(ModBlocks.ANCIENT_STONE_SLAB)
+                .add(ModBlocks.ANCIENT_STONE_STAIRS)
+                .add(ModBlocks.ANCIENT_STONE_WALL)
+
+                .add(ModBlocks.TUNGSTEN_ORE)
+                .add(ModBlocks.RUBY_ORE)
+                .add(ModBlocks.PYRONITE_ORE)
+
         ;
 
 
@@ -38,6 +48,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(ModBlocks.WILLOW_FENCE)
                 .add(ModBlocks.WILLOW_FENCE_GATE)
                 .add(ModBlocks.WILLOW_PRESSURE_PLATE)
+
 
 
                 .add(ModBlocks.REDWOOD_PLANKS)
@@ -98,6 +109,7 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
+
         ;
 
 
@@ -108,7 +120,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
         ;
         getOrCreateTagBuilder(BlockTags.NEEDS_STONE_TOOL);
 
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL);
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.TUNGSTEN_ORE)
+                .add(ModBlocks.RUBY_ORE);
 
         getOrCreateTagBuilder(BlockTags.NEEDS_DIAMOND_TOOL);
 
@@ -142,6 +156,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
         getOrCreateTagBuilder(BlockTags.TRAPDOORS)
                 .add(ModBlocks.WILLOW_TRAPDOOR)
+        ;
+        getOrCreateTagBuilder(BlockTags.WALLS)
+                .add(ModBlocks.ANCIENT_STONE_WALL)
         ;
 
         getOrCreateTagBuilder(BlockTags.LEAVES)

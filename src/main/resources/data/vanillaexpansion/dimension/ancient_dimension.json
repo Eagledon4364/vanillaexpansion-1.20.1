@@ -1,0 +1,25 @@
+{
+  "preset": "vanillaexpansion:ancient_dimension",
+  "type": "vanillaexpansion:ancient_dimension_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "minecraft:overworld",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "vanillaexpansion:ancient_plains",
+          "parameters": {
+            "temperature": 0.15,
+            "humidity": 0.2,
+            "continentalness": 1,
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": 0.2,
+            "offset": 0.6
+          }
+        }
+      ]
+    }
+  }
+}

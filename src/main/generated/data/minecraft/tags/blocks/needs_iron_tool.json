@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "vanillaexpansion:tungsten_ore",
+    "vanillaexpansion:ruby_ore"
+  ]
 }

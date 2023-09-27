@@ -2,36 +2,48 @@ package cdvj.vanillaexpansion.world.feature;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
 import cdvj.vanillaexpansion.block.ModBlocks;
+import net.minecraft.block.Blocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.BlockTags;
+import net.minecraft.structure.rule.BlockMatchRuleTest;
+import net.minecraft.structure.rule.RuleTest;
+import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
-import net.minecraft.world.gen.feature.ConfiguredFeature;
-import net.minecraft.world.gen.feature.Feature;
-import net.minecraft.world.gen.feature.FeatureConfig;
-import net.minecraft.world.gen.feature.TreeFeatureConfig;
+import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
 import net.minecraft.world.gen.foliage.MegaPineFoliagePlacer;
 import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
 import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
+import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Mod;
+
+import java.util.List;
+
 
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> WILLOW_KEY = registryKey("willow_tree");
     public static final RegistryKey<ConfiguredFeature<?, ?>> REDWOOD_KEY = registryKey("redwood_tree");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> TUNGSTEN_ORE_KEY = registryKey("tungsten_ore");
+
+
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
+        RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
+        RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
+        RuleTest endReplaceables = new TagMatchRuleTest(BlockTags.INFINIBURN_END);
         register(context, WILLOW_KEY, Feature.TREE, (new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.WILLOW_LOG),
-                new StraightTrunkPlacer(5, 6, 3),
+                new ForkingTrunkPlacer(5, 6, 3),
                 BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
                 new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
                 new TwoLayersFeatureSize(3, 1, 5))).build());
-    }
-    public static void bootstrap1(Registerable<ConfiguredFeature<?, ?>> context) {
 
 
 
@@ -41,6 +53,11 @@ public class ModConfiguredFeatures {
                 BlockStateProvider.of(ModBlocks.REDWOOD_LEAVES),
                 new MegaPineFoliagePlacer(ConstantIntProvider.create(0), ConstantIntProvider.create(0), ConstantIntProvider.create(13)),
                 new TwoLayersFeatureSize(1, 1, 2))).build());
+
+        List<OreFeatureConfig.Target> overWorldTungstenOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TUNGSTEN_ORE.getDefaultState()),
+                        OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TUNGSTEN_ORE.getDefaultState()));
+        register(context, TUNGSTEN_ORE_KEY, Feature.ORE, new OreFeatureConfig(overWorldTungstenOres, 10));
     }
 
 

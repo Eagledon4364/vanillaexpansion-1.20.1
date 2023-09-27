@@ -42,35 +42,55 @@ public class ToolCraftingStationScreenHandler extends ScreenHandler {
         return propertyDelegate.get(0) > 0;
     }
     public int getScaledProgress() {
-        int progress = this.propertyDelegate.get(1);
+        int progress = this.propertyDelegate.get(0);
         int maxProgress = this.propertyDelegate.get(1);
         int progressArrowSize = 24;
 
-        return maxProgress != 1 && progress != 1 ? progress * progressArrowSize / maxProgress : 1;
+        return maxProgress != 0 && progress != 0 ? progress * progressArrowSize / maxProgress : 0;
     }
 
 
+
+
     @Override
-    public ItemStack quickMove(PlayerEntity player, int slot) {
-        ItemStack itemStack = ItemStack.EMPTY;
-        Slot slot2 = this.slots.get(slot);
-        if (slot2 != null && slot2.hasStack()) {
-            ItemStack itemStack2 = slot2.getStack();
-            itemStack = itemStack2.copy();
-            if (slot < 9 ? !this.insertItem(itemStack2, 9, 45, true) : !this.insertItem(itemStack2, 0, 9, false)) {
-                return ItemStack.EMPTY;
-            }
-            if (itemStack2.isEmpty()) {
-                slot2.setStack(ItemStack.EMPTY);
+    public ItemStack quickMove(PlayerEntity player, int slotIndex) {
+        Slot slot = this.slots.get(slotIndex);
+
+        if (slot != null && slot.hasStack()) {
+            ItemStack stackInSlot = slot.getStack();
+            ItemStack stackToMove = stackInSlot.copy();
+
+            if (slotIndex < 2) {
+                // If the clicked slot is one of your ingredient slots, try to move it to the player's inventory
+                if (!this.insertItem(stackInSlot, 3, 39, true)) {
+                    return ItemStack.EMPTY;
+                }
+            } else if (slotIndex == 2) {
+                // If the clicked slot is the output slot, try to move it to the player's inventory
+                if (!this.insertItem(stackInSlot, 3, 39, false)) {
+                    return ItemStack.EMPTY;
+                }
             } else {
-                slot2.markDirty();
+                // If the clicked slot is in the player's inventory, try to move it to your ingredient slots
+                if (!this.insertItem(stackInSlot, 0, 2, false)) {
+                    return ItemStack.EMPTY;
+                }
             }
-            if (itemStack2.getCount() == itemStack.getCount()) {
+
+            if (stackInSlot.isEmpty()) {
+                slot.setStack(ItemStack.EMPTY);
+            } else {
+                slot.markDirty();
+            }
+
+            if (stackInSlot.getCount() == stackToMove.getCount()) {
                 return ItemStack.EMPTY;
             }
-            slot2.onTakeItem(player, itemStack2);
+
+            slot.onTakeItem(player, stackToMove);
         }
-        return itemStack;
+
+        return ItemStack.EMPTY;
     }
 
     @Override

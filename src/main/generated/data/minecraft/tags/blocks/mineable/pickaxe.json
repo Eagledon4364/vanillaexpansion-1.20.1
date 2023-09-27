@@ -1,4 +1,12 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "vanillaexpansion:ancient_stone",
+    "vanillaexpansion:ancient_stone_slab",
+    "vanillaexpansion:ancient_stone_stairs",
+    "vanillaexpansion:ancient_stone_wall",
+    "vanillaexpansion:tungsten_ore",
+    "vanillaexpansion:ruby_ore",
+    "vanillaexpansion:pyronite_ore"
+  ]
 }

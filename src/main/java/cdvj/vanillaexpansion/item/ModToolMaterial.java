@@ -7,7 +7,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
     PYRONITE(4, 4096, 12f, 5, 40,
-            () -> Ingredient.ofItems(ModItems.PYRONITE_INGOT));
+            () -> Ingredient.ofItems(ModItems.PYRONITE_INGOT)),
+    TUNGSTEN(3, 1024, 8f, 4, 15,
+            () -> Ingredient.ofItems(ModItems.TUNGSTEN_INGOT));
 
     private final int miningLevel;
     private final int itemDurability;

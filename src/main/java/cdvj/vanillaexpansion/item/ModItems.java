@@ -1,16 +1,11 @@
 package cdvj.vanillaexpansion.item;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
-import cdvj.vanillaexpansion.item.tools.AdzeItem;
-import cdvj.vanillaexpansion.item.tools.AxelItem;
-import cdvj.vanillaexpansion.item.tools.ScytheItem;
-import cdvj.vanillaexpansion.item.tools.TerraBreakerItem;
-import cdvj.vanillaexpansion.item.tools.CutterItem;
-import cdvj.vanillaexpansion.item.tools.RipperItem;
+import cdvj.vanillaexpansion.block.ModBlocks;
+import cdvj.vanillaexpansion.item.client.TechArmorItem;
 import cdvj.vanillaexpansion.item.tools.*;
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -20,6 +15,10 @@ import net.minecraft.util.Rarity;
 public class ModItems {
 
     public static final Item RUBY = registerItem("ruby",
+            new Item(new FabricItemSettings()));
+    public static final Item RAW_TUNGSTEN = registerItem("raw_tungsten",
+            new Item(new FabricItemSettings()));
+    public static final Item TUNGSTEN_INGOT = registerItem("tungsten_ingot",
             new Item(new FabricItemSettings()));
     public static final Item PYRONITE_INGOT = registerItem("pyronite_ingot",
             new Item(new FabricItemSettings().fireproof()));
@@ -37,8 +36,43 @@ public class ModItems {
             new Item(new FabricItemSettings().fireproof()));
 
 
+    public static final Item STRAWBERRY = registerItem("strawberry",
+            new AliasedBlockItem(ModBlocks.STRAWBERRY_BUSH, new FabricItemSettings().food(ModFoodComponents.STRAWBERRY)));
+    public static final Item STRAWBERRY_PIE = registerItem("strawberry_pie",
+            new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY_PIE)));
+
+    //armor
+
+    public static final Item TECH_HELMET = registerItem("tech_helmet",
+            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.HELMET,
+                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item TECH_CHESTPLATE = registerItem("tech_chestplate",
+            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.CHESTPLATE,
+                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item TECH_LEGGINGS = registerItem("tech_leggings",
+            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.LEGGINGS,
+                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item TECH_BOOTS = registerItem("tech_boots",
+            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.BOOTS,
+                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+
+
 
 //TOOLS
+public static final Item TUNGSTEN_PICKAXE = registerItem("tungsten_pickaxe",
+        new PickaxeItem(ModToolMaterial.TUNGSTEN, 1, -5,
+                new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item TUNGSTEN_AXE = registerItem("tungsten_axe",
+            new AxeItem(ModToolMaterial.TUNGSTEN, 5, -3,
+                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
+    public static final Item TUNGSTEN_SHOVEL = registerItem("tungsten_shovel",
+            new ShovelItem(ModToolMaterial.TUNGSTEN, 1, -3,
+                    new FabricItemSettings()
+                            .rarity(Rarity.RARE).fireproof()));
+    public static final Item TUNGSTEN_HOE = registerItem("tungsten_hoe",
+            new HoeItem(ModToolMaterial.TUNGSTEN, 1, -3,
+                    new FabricItemSettings()
+                            .rarity(Rarity.RARE).fireproof()));
     //1 use
     public static final Item BASE_TOOL = registerItem("base_tool",
         new Item(new FabricItemSettings().rarity(Rarity.RARE).fireproof()));

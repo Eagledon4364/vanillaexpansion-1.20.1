@@ -23,6 +23,9 @@
 		],
 		"fabric-datagen": [
 			"cdvj.vanillaexpansion.VanillaExpansionDataGenerator"
+		],
+		"terrablender": [
+			"cdvj.vanillaexpansion.world.biome.ModTerrainBlenderAPI"
 		]
 	},
 	"mixins": [
