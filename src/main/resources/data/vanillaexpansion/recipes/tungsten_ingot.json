@@ -4,7 +4,7 @@
   "cookingtime": 200,
   "experience": 2.0,
   "ingredient": {
-    "item": "vanillaexpansion:pyronite_ore"
+    "item": "vanillaexpansion:raw_tungsten"
   },
-  "result": "vanillaexpansion:pyronite_ingot"
+  "result": "vanillaexpansion:tungsten_ingot"
 }

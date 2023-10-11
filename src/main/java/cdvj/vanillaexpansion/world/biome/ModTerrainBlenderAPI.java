@@ -10,11 +10,12 @@ import terrablender.api.TerraBlenderApi;
 public class ModTerrainBlenderAPI implements TerraBlenderApi {
     @Override
     public void onTerraBlenderInitialized() {
+        Regions.register(new ModOverworldRegion(new Identifier(VanillaExpansion.MOD_ID, "ancient_plains"), 1));
         Regions.register(new ModOverworldRegion(new Identifier(VanillaExpansion.MOD_ID, "redwood_forest"), 4));
         Regions.register(new ModOverworldRegion(new Identifier(VanillaExpansion.MOD_ID, "willow_swamp"), 4));
 
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, VanillaExpansion.MOD_ID, ModMaterialRules.makeRules1());
-        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, VanillaExpansion.MOD_ID, ModMaterialRules.makeRules2());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, VanillaExpansion.MOD_ID, ModMaterialRules.makeRules());
+        SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, VanillaExpansion.MOD_ID, ModMaterialRules.makeRules());
         SurfaceRuleManager.addSurfaceRules(SurfaceRuleManager.RuleCategory.OVERWORLD, VanillaExpansion.MOD_ID, ModMaterialRules.makeRules());
     }
 }

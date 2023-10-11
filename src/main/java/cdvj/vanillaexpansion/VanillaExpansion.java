@@ -2,6 +2,8 @@ package cdvj.vanillaexpansion;
 
 import cdvj.vanillaexpansion.block.ModBlockEntities;
 import cdvj.vanillaexpansion.block.ModBlocks;
+import cdvj.vanillaexpansion.entity.ModEntities;
+import cdvj.vanillaexpansion.entity.custom.PrimalDragonEntity;
 import cdvj.vanillaexpansion.item.ModItemGroups;
 import cdvj.vanillaexpansion.item.ModItems;
 import cdvj.vanillaexpansion.recipe.ModRecipes;
@@ -12,6 +14,7 @@ import cdvj.vanillaexpansion.util.ModStrippableBlocks;
 import cdvj.vanillaexpansion.world.feature.ModConfiguredFeatures;
 import cdvj.vanillaexpansion.world.feature.gen.ModWorldGeneration;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -31,6 +34,8 @@ public class VanillaExpansion implements ModInitializer {
 		ModStrippableBlocks.registerStrippables();
 
 		ModConfiguredFeatures.registerConfiguredFeatures();
+		ModWorldGeneration.generateModWorldGeneration();
+
 		ModScreenHandlers.registerAllScreenHandlers();
 
 		ModBlockEntities.registerBlockEntities();
@@ -38,14 +43,8 @@ public class VanillaExpansion implements ModInitializer {
 
 		ModRegistry.registerStuff();
 
-		ModWorldGeneration.generateModWorldGeneration();
 
-
-
-
-
-
-
+		FabricDefaultAttributeRegistry.register(ModEntities.PRIMAL_DRAGON, PrimalDragonEntity.createPrimalDragonAttributes());
 
 		LOGGER.info("Vanilla Expansion Mod-pack made by Eagledon4364");
 	}

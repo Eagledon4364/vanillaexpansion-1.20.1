@@ -39,8 +39,12 @@
   "tooltip.trowel_item1": "Shovel",
   "tooltip.trowel_item2": "hoe",
 
+  "entity.vanillaexpansion.primal_dragon": "Primal Dragon",
+
 
   "item.vanillaexpansion.ruby": "Ruby",
+
+  "item.vanillaexpansion.primal_dragon_spawn_egg": "Primal Dragon Spawn Egg",
   "item.vanillaexpansion.pyronite_ingot": "Pyronite Ingot",
 
   "item.vanillaexpansion.base_tool": "Base Tool",
@@ -51,6 +55,7 @@
   "item.vanillaexpansion.tech_leggings": "Tech Leggings",
 
   "tool_crafting_station": "Tool Crafting Station",
+  "container.backpack": "Backpack",
 
   "item.vanillaexpansion.pickaxe_upgrade": "Pickaxe Upgrade",
   "item.vanillaexpansion.axe_upgrade": "Axe Upgrade",
@@ -65,8 +70,6 @@
   "item.vanillaexpansion.tungsten_ingot": "Tungsten",
   "item.vanillaexpansion.raw_tungsten": "Raw Tungsten",
 
-
-  "item.vanillaexpansion.ancient_water_bucket": "Acnient Water Bucket",
 
 
   "item.vanillaexpansion.tungsten_axe": "Tungsten Axe",

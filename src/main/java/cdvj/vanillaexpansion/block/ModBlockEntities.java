@@ -14,6 +14,11 @@ public class ModBlockEntities {
             new Identifier(VanillaExpansion.MOD_ID, "tool_crafting_station_block"),
             FabricBlockEntityTypeBuilder.create(ToolCraftingStationBlockEntity::new, ModBlocks.TOOL_CRAFTING_STATION).build());
 
+    public static final BlockEntityType<ToolCraftingStationBlockEntity> BACKPACK = Registry.register(
+            Registries.BLOCK_ENTITY_TYPE,
+            new Identifier(VanillaExpansion.MOD_ID, "backpack"),
+            FabricBlockEntityTypeBuilder.create(ToolCraftingStationBlockEntity::new, ModBlocks.BACKPACK).build());
+
     public static void registerBlockEntities() {
     }
 

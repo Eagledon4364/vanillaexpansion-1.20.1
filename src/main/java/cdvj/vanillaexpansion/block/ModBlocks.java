@@ -19,6 +19,8 @@ public class ModBlocks {
 
     public static final Block TOOL_CRAFTING_STATION = registerBlock("tool_crafting_station",
             new ToolCraftingStationBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque().dynamicBounds()));
+      public static final Block BACKPACK = registerBlock("backpack",
+            new ToolCraftingStationBlock(FabricBlockSettings.copyOf(Blocks.CRAFTING_TABLE).nonOpaque().dynamicBounds()));
     //ores
     public static final Block RUBY_ORE = registerBlock("ruby_ore",
             new Block(FabricBlockSettings.copyOf(Blocks.EMERALD_ORE)));

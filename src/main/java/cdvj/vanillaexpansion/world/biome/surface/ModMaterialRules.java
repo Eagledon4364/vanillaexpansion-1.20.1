@@ -4,52 +4,35 @@ import cdvj.vanillaexpansion.block.ModBlocks;
 import cdvj.vanillaexpansion.world.biome.ModBiomes;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.world.gen.noise.NoiseParametersKeys;
 import net.minecraft.world.gen.surfacebuilder.MaterialRules;
 
 public class ModMaterialRules {
+    private static final MaterialRules.MaterialRule DIRT = makeStateRule(Blocks.DIRT);
+    private static final MaterialRules.MaterialRule GRASS_BLOCK = makeStateRule(Blocks.GRASS_BLOCK);
     private static final MaterialRules.MaterialRule ANCIENT_STONE = makeStateRule(ModBlocks.ANCIENT_STONE);
-    private static final MaterialRules.MaterialRule GRASS = makeStateRule(Blocks.GRASS_BLOCK);
+
 
 
 
     public static MaterialRules.MaterialRule makeRules() {
         MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
 
-        MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, ANCIENT_STONE), ANCIENT_STONE);
+
+        MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, GRASS_BLOCK), DIRT);
 
         return MaterialRules.sequence(
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.ANCIENT_PLAINS),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6, ANCIENT_STONE)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, ANCIENT_STONE)),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, ANCIENT_STONE)),
+                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, ANCIENT_STONE)),
 
-
-                // Default to a grass and dirt surface
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
-        );
-    }  public static MaterialRules.MaterialRule makeRules1() {
-        MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
-
-        MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, GRASS), ANCIENT_STONE);
-
-        return MaterialRules.sequence(
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.REDWOOD_FOREST),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6, GRASS)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, GRASS)),
-
-
-                // Default to a grass and dirt surface
-                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, grassSurface)
-        );
-    }
-    public static MaterialRules.MaterialRule makeRules2() {
-        MaterialRules.MaterialCondition isAtOrAboveWaterLevel = MaterialRules.water(-1, 0);
-
-        MaterialRules.MaterialRule grassSurface = MaterialRules.sequence(MaterialRules.condition(isAtOrAboveWaterLevel, GRASS), ANCIENT_STONE);
-
-        return MaterialRules.sequence(
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS_BLOCK)),
+                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, ANCIENT_STONE)),
                 MaterialRules.sequence(MaterialRules.condition(MaterialRules.biome(ModBiomes.WILLOW_SWAMP),
-                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR_WITH_SURFACE_DEPTH_RANGE_6, GRASS)),
-                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING_WITH_SURFACE_DEPTH, GRASS)),
+                                MaterialRules.condition(MaterialRules.STONE_DEPTH_FLOOR, GRASS_BLOCK)),
+                        MaterialRules.condition(MaterialRules.STONE_DEPTH_CEILING, ANCIENT_STONE)),
+
 
 
                 // Default to a grass and dirt surface

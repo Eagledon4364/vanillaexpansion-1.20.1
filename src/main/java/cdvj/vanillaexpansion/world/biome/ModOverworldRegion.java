@@ -21,12 +21,12 @@ public class ModOverworldRegion extends Region {
 
     @Override
     public void addBiomes(Registry<Biome> registry, Consumer<Pair<MultiNoiseUtil.NoiseHypercube, RegistryKey<Biome>>> mapper) {
- //       this.addBiomeSimilar(mapper, BiomeKeys.BADLANDS, ModBiomes.ANCIENT_PLAINS);
-        this.addBiomeSimilar(mapper, BiomeKeys.TAIGA, ModBiomes.REDWOOD_FOREST);
-        this.addBiomeSimilar(mapper,  BiomeKeys.SWAMP, ModBiomes.WILLOW_SWAMP);
-//        this.addBiome(mapper, MultiNoiseUtil.createNoiseHypercube(0.5f, 1f, 1.3f, 0.2f, 0.3f, 0.25f, 1), ModBiomes.WILLOW_SWAMP);
-//        this.addBiome(mapper, MultiNoiseUtil.createNoiseHypercube(0.5f, 1f, 1.3f, 0.2f, 0.3f, 0.25f, 1), ModBiomes.REDWOOD_FOREST);
-    }
+        this.addModifiedVanillaOverworldBiomes(mapper, modifiedVanillaOverworldBuilder -> {
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.PLAINS, ModBiomes.ANCIENT_PLAINS);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.FOREST, ModBiomes.REDWOOD_FOREST);
+            modifiedVanillaOverworldBuilder.replaceBiome(BiomeKeys.SWAMP, ModBiomes.WILLOW_SWAMP);
+        });
+     }
 
 
 }

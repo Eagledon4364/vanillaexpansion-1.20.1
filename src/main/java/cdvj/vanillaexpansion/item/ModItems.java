@@ -2,7 +2,7 @@ package cdvj.vanillaexpansion.item;
 
 import cdvj.vanillaexpansion.VanillaExpansion;
 import cdvj.vanillaexpansion.block.ModBlocks;
-import cdvj.vanillaexpansion.item.client.TechArmorItem;
+import cdvj.vanillaexpansion.entity.ModEntities;
 import cdvj.vanillaexpansion.item.tools.*;
 import cdvj.vanillaexpansion.util.CustomBlockTags;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
@@ -41,22 +41,11 @@ public class ModItems {
     public static final Item STRAWBERRY_PIE = registerItem("strawberry_pie",
             new Item(new FabricItemSettings().food(ModFoodComponents.STRAWBERRY_PIE)));
 
+
+    public static final Item PRIMALDRAGONSPAWNEGG = registerItem("primal_dragon_spawn_egg",
+            new SpawnEggItem(ModEntities.PRIMAL_DRAGON, 0x2e7054, 0x00ff0a, new FabricItemSettings()));
+
     //armor
-
-    public static final Item TECH_HELMET = registerItem("tech_helmet",
-            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.HELMET,
-                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
-    public static final Item TECH_CHESTPLATE = registerItem("tech_chestplate",
-            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.CHESTPLATE,
-                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
-    public static final Item TECH_LEGGINGS = registerItem("tech_leggings",
-            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.LEGGINGS,
-                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
-    public static final Item TECH_BOOTS = registerItem("tech_boots",
-            new TechArmorItem(ModArmorMaterials.PYRONITE, ArmorItem.Type.BOOTS,
-                    new FabricItemSettings().rarity(Rarity.RARE).fireproof()));
-
-
 
 //TOOLS
 public static final Item TUNGSTEN_PICKAXE = registerItem("tungsten_pickaxe",

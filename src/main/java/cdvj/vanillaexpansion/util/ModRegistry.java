@@ -4,6 +4,8 @@ import cdvj.vanillaexpansion.VanillaExpansion;
 import cdvj.vanillaexpansion.block.ModBlocks;
 import cdvj.vanillaexpansion.item.ModItems;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
+import net.minecraft.nbt.NbtCompound;
+import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
 
 public class ModRegistry {
@@ -18,4 +20,5 @@ public class ModRegistry {
                 .tintColor(0x00ff00)
                 .registerPortal();
     }
+
 }

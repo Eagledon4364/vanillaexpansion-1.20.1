@@ -48,11 +48,6 @@ public class ModItemGroups {
                         //terrabreaker
                         entries.add(ModItems.PYRONITE_TERRA_BREAKER);
                         //armor
-                        entries.add(ModItems.TECH_HELMET);
-                        entries.add(ModItems.TECH_CHESTPLATE);
-                        entries.add(ModItems.TECH_LEGGINGS);
-                        entries.add(ModItems.TECH_BOOTS);
-
                     }).build());
     public static final ItemGroup RUBY_GROUP = Registry.register(Registries.ITEM_GROUP,
             new Identifier(VanillaExpansion.MOD_ID, "ruby"),
@@ -67,6 +62,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.TUNGSTEN_ORE);
                         entries.add(ModItems.RAW_TUNGSTEN);
                         entries.add(ModItems.TUNGSTEN_INGOT);
+                        entries.add(ModItems.PRIMALDRAGONSPAWNEGG);
                         //food
                         entries.add(ModItems.STRAWBERRY);
                         entries.add(ModItems.STRAWBERRY_PIE);

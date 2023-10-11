@@ -1,13 +1,11 @@
 package cdvj.vanillaexpansion.datagen;
 
-import cdvj.vanillaexpansion.util.CustomBlockTags;
 import cdvj.vanillaexpansion.block.ModBlocks;
+import cdvj.vanillaexpansion.util.CustomBlockTags;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
-import net.minecraft.block.Block;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.BlockTags;
-import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Mod;
 
 import java.util.concurrent.CompletableFuture;
 

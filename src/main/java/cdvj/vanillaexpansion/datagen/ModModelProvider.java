@@ -7,7 +7,11 @@ import cdvj.vanillaexpansion.block.ModBlocks;
 import cdvj.vanillaexpansion.item.ModItems;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
+import net.minecraft.data.client.Model;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 public class ModModelProvider extends FabricModelProvider {
     public ModModelProvider(FabricDataOutput output) {
@@ -63,6 +67,9 @@ public class ModModelProvider extends FabricModelProvider {
 
     @Override
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
+        itemModelGenerator.register(ModItems.PRIMALDRAGONSPAWNEGG,
+                new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
+
         itemModelGenerator.register(ModItems.RUBY, Models.GENERATED);
         itemModelGenerator.register(ModItems.PYRONITE_INGOT, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_TUNGSTEN, Models.GENERATED);
@@ -70,11 +77,6 @@ public class ModModelProvider extends FabricModelProvider {
         //food
         itemModelGenerator.register(ModItems.STRAWBERRY, Models.GENERATED);
         itemModelGenerator.register(ModItems.STRAWBERRY_PIE, Models.GENERATED);
-
-        itemModelGenerator.register(ModItems.TECH_BOOTS, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TECH_CHESTPLATE, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TECH_HELMET, Models.GENERATED);
-        itemModelGenerator.register(ModItems.TECH_LEGGINGS, Models.GENERATED);
 
 
 

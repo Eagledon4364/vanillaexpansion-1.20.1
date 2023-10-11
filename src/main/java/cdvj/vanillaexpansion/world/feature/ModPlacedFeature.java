@@ -19,6 +19,7 @@ public class ModPlacedFeature {
     public static final RegistryKey<PlacedFeature> REDWOOD_TREE_PLACED_KEY = registerKey("redwood_tree_placed");
     public static final RegistryKey<PlacedFeature> WILLOW_TREE_PLACED_KEY = registerKey("willow_tree_placed");
     public static final RegistryKey<PlacedFeature> TUNGSTEN_ORE_PLACED_KEY = registerKey("tungsten_ore_placed");
+    public static final RegistryKey<PlacedFeature> PYRONITE_ORE_PLACED_KEY = registerKey("pyronite_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -32,6 +33,9 @@ public class ModPlacedFeature {
         register(context, TUNGSTEN_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.TUNGSTEN_ORE_KEY),
                 ModOrePlacement.modifiersWithCount(10,
                         HeightRangePlacementModifier.uniform(YOffset.fixed(-64), YOffset.fixed(120))));
+        register(context, PYRONITE_ORE_PLACED_KEY, configuredFeatureRegistryEntryLookup.getOrThrow(ModConfiguredFeatures.PYRONITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(9,
+                        HeightRangePlacementModifier.uniform(YOffset.fixed(-80), YOffset.fixed(120))));
 
     }
 

@@ -14,14 +14,11 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
-import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
+import net.minecraft.world.gen.foliage.BushFoliagePlacer;
 import net.minecraft.world.gen.foliage.MegaPineFoliagePlacer;
-import net.minecraft.world.gen.foliage.SpruceFoliagePlacer;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 import net.minecraft.world.gen.trunk.GiantTrunkPlacer;
-import net.minecraft.world.gen.trunk.StraightTrunkPlacer;
-import software.bernie.shadowed.eliotlash.mclib.math.functions.classic.Mod;
 
 import java.util.List;
 
@@ -31,18 +28,19 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> REDWOOD_KEY = registryKey("redwood_tree");
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> TUNGSTEN_ORE_KEY = registryKey("tungsten_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> PYRONITE_ORE_KEY = registryKey("pyronite_ore");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
         RuleTest netherReplaceables = new TagMatchRuleTest(BlockTags.BASE_STONE_NETHER);
-        RuleTest endReplaceables = new TagMatchRuleTest(BlockTags.INFINIBURN_END);
+        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
         register(context, WILLOW_KEY, Feature.TREE, (new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(ModBlocks.WILLOW_LOG),
                 new ForkingTrunkPlacer(5, 6, 3),
                 BlockStateProvider.of(ModBlocks.WILLOW_LEAVES),
-                new BlobFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(0), 4),
+                new BushFoliagePlacer(ConstantIntProvider.create(2), ConstantIntProvider.create(2), 3),
                 new TwoLayersFeatureSize(3, 1, 5))).build());
 
 
@@ -58,6 +56,13 @@ public class ModConfiguredFeatures {
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.TUNGSTEN_ORE.getDefaultState()),
                         OreFeatureConfig.createTarget(deepslateReplaceables, ModBlocks.TUNGSTEN_ORE.getDefaultState()));
         register(context, TUNGSTEN_ORE_KEY, Feature.ORE, new OreFeatureConfig(overWorldTungstenOres, 10));
+
+        List<OreFeatureConfig.Target> pyronite_ore =
+                List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.PYRONITE_ORE.getDefaultState()));
+
+        register(context, PYRONITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(pyronite_ore, 9));
+
+
     }
 
 

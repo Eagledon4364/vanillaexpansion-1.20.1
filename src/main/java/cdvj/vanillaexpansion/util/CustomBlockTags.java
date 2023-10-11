@@ -1,11 +1,7 @@
 package cdvj.vanillaexpansion.util;
 
 
-import cdvj.vanillaexpansion.block.ModBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.TagKey;
-import net.minecraft.util.Identifier;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
